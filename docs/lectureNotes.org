@@ -1,0 +1,57 @@
+
+* Week 3:
+** Types of Data Questions
+*** Descriptive
+    Like census data - what is the data? no analysis
+    Ngram viewer
+    No generalizing
+    No interpretation
+*** Exploratory
+    Find new relationships/connections
+    Find correlations - not causations
+    No the final say on a finding
+    fMRI scans, night sky imaging
+*** Inferential
+    Small sample analysis to model bigger samples
+    Analyze subset to INFER about bigger population
+    How pollution in one city affects health
+*** Predictive
+    Measure a set X to predict Y
+    NOT causation
+    Prediction models
+    Polling data to predict elections
+*** Causal
+    Randomized studies on variable X affecting Y
+    Relationships are identified as averages
+    The "gold standard"
+*** Mechanistic
+    Measure exact changes in variables
+    Engineering, material sciences, etc.
+** What's data!?
+*** Data: values of qualitative or quantitative variables, belonging to a set of items
+*** Variable: measurement of a characteristic of an item 
+**** Qualitative: type, origin, sex, descriptive
+**** Quantitative: numbers, blood pressure, height, etc.
+*** API content, medical record, tables, JSON, images, audio, map, 
+    Data.gov
+    DarwinTunes
+*** Is messy, not a table
+*** _Data follows question_
+** Big Data
+*** Is there a _big question_ for it?
+*** Cheap hardware = Storage is cheap
+*** Internet = Collection is cheap
+*** You need _right_ data, not _big_
+** Experimental design
+*** Will define if your data is right
+*** Plan to share data and code
+    figshare.com
+    github.com
+*** Questions before data
+*** Confounding variables! Spurious correlation
+    Chocolate consumption vs Noble prize per capita
+    Shoe size vs Literacy
+*** Prediction quantities
+    Probability of positives/negatives
+    False positives vs negatives
+*** Data dredging - positive finding bias
