@@ -1,5 +1,6 @@
 
-* Week 3:
+* DATA SCIENTIST TOOLBOX Week 3:
+
 ** Types of Data Questions
 *** Descriptive
     Like census data - what is the data? no analysis
@@ -27,6 +28,7 @@
 *** Mechanistic
     Measure exact changes in variables
     Engineering, material sciences, etc.
+
 ** What's data!?
 *** Data: values of qualitative or quantitative variables, belonging to a set of items
 *** Variable: measurement of a characteristic of an item 
@@ -37,11 +39,13 @@
     DarwinTunes
 *** Is messy, not a table
 *** _Data follows question_
+
 ** Big Data
 *** Is there a _big question_ for it?
 *** Cheap hardware = Storage is cheap
 *** Internet = Collection is cheap
 *** You need _right_ data, not _big_
+
 ** Experimental design
 *** Will define if your data is right
 *** Plan to share data and code
@@ -55,3 +59,53 @@
     Probability of positives/negatives
     False positives vs negatives
 *** Data dredging - positive finding bias
+
+
+* R LANGUAGE Week 1:
+
+** Reading Tables
+*** https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html
+*** Defaults: space separated, '#' = comment, strings are factors
+*** ~colClasses~ defines classes for each column => use it make building the table faster
+*** Big Data considerations:
+**** All read data is stored in memory -> use ~nrows~ to reduce memory use
+**** 32 or 64 bit?
+**** Other users on the machine?
+**** types of data in column?
+     numeric = 8 bytes
+     * 1.5mil rows
+     * 120 columns
+     = 1.34GB
+     + overhead
+**** On average = expect to use twice as much RAM as your data takes on HDD
+
+** ~dump()~ and ~dput()~ for Textual Formats
+*** Getting data: ~source()~ and ~dget()~
+*** metadata is included; corruption is easier to fix
+*** ~dput()~ constructs R code based on R object input to read it into R later
+*** ~dump()~ same, but can take multiple R objects
+
+** Connections
+*** opens files, gzfiles, bzfiles and url
+*** can define type: reading, writing, etc.
+*** useful for reading subsets
+
+** [] vs [[]] vs $
+*** [ returns same object type; can return MULTIPLE objects (so it will return a list/vector, not the actual values)
+list[1] will return a list
+*** [[ returns only a single object; may be of different type; can compute the index that is passed
+list[[name]] or list[[variable]] or list[[functionOutput]]
+*** $ returns object by NAME, otherwise the same as [[
+list$name
+*** ~matrix[]~ will ~drop~ 2nd dimension, so it will return a list, not matrix
+*** ~list$nam~ can do partial matching: "nam" = "name"; same for [[]] if you set ~exact=FALSE~
+
+** ~is.na()~ and ~is.nan()~ and ~complete.cases()~  
+*** logical output; checks for missing values 
+*** NA is a builtin type
+*** NaN is Not A Number != NA
+
+** Vectorized coputations 
+*** built-in looping for vector: computing/comparing values by index for 2+ vectors/matricies
+vector(x) + vector(y) = vector(x1+y1, x2+y2, etc)
+*** True/dot products are: %*% or %+% 

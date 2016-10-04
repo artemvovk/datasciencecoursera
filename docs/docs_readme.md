@@ -10,5 +10,7 @@
 * http://rmarkdown.rstudio.com/lesson-1.html
 * rmarkdown-cheatsheet.pdf
 
-## RStudio
-* TODO
+## R Programming
+* https://support.rstudio.com/hc/en-us
+* https://www.r-project.org/mail.html
+* https://www.r-project.org/doc/bib/R-books.html
