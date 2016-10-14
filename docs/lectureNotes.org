@@ -84,12 +84,10 @@
 *** metadata is included; corruption is easier to fix
 *** ~dput()~ constructs R code based on R object input to read it into R later
 *** ~dump()~ same, but can take multiple R objects
-
 ** Connections
 *** opens files, gzfiles, bzfiles and url
 *** can define type: reading, writing, etc.
 *** useful for reading subsets
-
 ** [] vs [[]] vs $
 *** [ returns same object type; can return MULTIPLE objects (so it will return a list/vector, not the actual values)
 list[1] will return a list
@@ -104,8 +102,92 @@ list$name
 *** logical output; checks for missing values 
 *** NA is a builtin type
 *** NaN is Not A Number != NA
-
 ** Vectorized coputations 
 *** built-in looping for vector: computing/comparing values by index for 2+ vectors/matricies
 vector(x) + vector(y) = vector(x1+y1, x2+y2, etc)
 *** True/dot products are: %*% or %+% 
+
+* Cleaning Data Week 1
+
+** Raw vs Processed 
+*** Raw data is just collected - it might look terrible - it was not altered
+*** Binary file, unformatted excel, JSON, handwritten
+*** Quantitative vs Qualitative data
+*** Preprocessing: merging, subsetting, transforming
+*** *ALWAYS RECORD ALL THE PROCESSING YOU DO ON DATA*
+*** Record the TIME and DATE when you got the data
+*** Processed data is ready for analysis
+** Tidy data
+*** After processing: still have raw data + tidy data + code book (aka metadata)
+*** *Must report all steps from raw data to tidy data*
+*** Third Normal Form - each variable has only one column, each observation gets one row
+*** One table for each kind of variable; tables can be linked by a column; one file per table;
+*** Have a metadata header; human readable names;
+** Code Book: 
+*** units, summary choices, 
+*** type of study done; a markdown/doc file, 
+*** study design description
+** Instruction list:
+*** a script that was used to process data;
+*** takes no parameters!
+*** If no script possible: include exact steps done
+*** Be *extremely* explicit with all the details
+** Reading data
+*** read.table() - most common, loads data in RAM!,
+*** can be slow, reads flat files
+*** you can set na.strings, skip, head, headers, remove quotation marks
+*** Excel files - they suck, but they're still popular
+** _EXCEL_ - read.xlsx() - tell which sheet to read, and if there's a header
+*** can read specific rows and columns
+*** you can write.xlsx(); or try XLConnect;
+** _XML_ - mostly on the web; extensible markup language 
+*** Markup - start/end/empty tags <tag></tag>
+*** Some tags have attributes <a src="okok"/>
+*** xmlTreeParse() - makes it into a structured object
+*** xmlRoot() - gets the main tree; rootNode[[]] - can be subsetted
+*** xmlNames(node) - spits out tags within the node; xmlValue(node) - gets values from between tags
+*** xmlSApply(node,"XPATH", function) - apply a function programmatically to a node
+*** XPath - language for processing XML
+/node - top level node
+//node - any level node
+node[@attr-name] - node with an attribute name
+node[@attr-name='foo'] - node with attribute name set to 'foo'
+** _JSON_ - close to XML, used a lot in APIs, different syntax and supports many value types
+*** fromJSON(url) - makes a data.frame; you can have data.frames within data.frames
+*** toJSON() - to make a JSON
+** _data.table_ - package that improves on data.frame; much faster
+*** tables() - lists all tables in memory
+*** subsetting columns is different, but you can pass variables to add/summarize/change columns
+*** .N, by=varName - .N will hold how many a certain group of varName appears
+*** setkey() did not have a clear explanation
+*** data.table reads files faster than data.frame
+
+* Cleanind Data Week 2
+
+** Reading mySQL
+*** linked tables; kind of like linked data.frames;
+*** https://www.pantz.org/software/mysql/mysqlcommands.html
+*** requires installation; uses RMySQL package; uses query language
+*** use fetch() to get smaller amounts
+*** remember to _clear_ the query and _close_ the connection
+** Reading HDF5
+*** hierarchical data format
+*** groups and datasets; metadata
+*** some complicated stuff;
+*** https://www.bioconductor.org/packages/release/bioc/html/rhdf5.html
+** Scraping the web
+*** some websites don't like it;
+*** readLines from a connection; or use XML package; or httr package; 
+*** you get authenticate; save handles;
+*** https://www.r-bloggers.com/search/web%20scraping/
+** Getting data from APIs
+*** sometimes requires accounts to get API ID
+*** user httr package; and the website's documentation
+** Other useful packages
+*** GOOGLE IT
+*** file; url; gzfile; bzfile; connections;
+*** foreign pacakge - for other programming languages
+*** RPostresSQL; RODBC; RMongo;  
+*** Images - jpeg; readbitmap; png; EBImage;
+*** GIS - rdgal; rgeos; raster; 
+*** Music - tuneR; seewave;
