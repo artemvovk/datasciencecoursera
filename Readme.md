@@ -18,6 +18,7 @@ source code
 additional specifications in readme.md
 
 ### TO_DO:
-#### Week 2
-1. Install R_packages
-2. Install Rtools
+
+1. Finish Getting and Cleaning Data assignment
+2. Review 4 submissions
+3. Check out Fitbir data

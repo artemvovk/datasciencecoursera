@@ -1,5 +1,5 @@
 
-* DATA SCIENTIST TOOLBOX Week 3:
+* Data Scientist Toolbox Week 3:
 
 ** Types of Data Questions
 *** Descriptive
@@ -60,8 +60,7 @@
     False positives vs negatives
 *** Data dredging - positive finding bias
 
-
-* R LANGUAGE Week 1:
+* R Language Week 1:
 
 ** Reading Tables
 *** https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html
@@ -191,3 +190,97 @@ node[@attr-name='foo'] - node with attribute name set to 'foo'
 *** Images - jpeg; readbitmap; png; EBImage;
 *** GIS - rdgal; rgeos; raster; 
 *** Music - tuneR; seewave;
+* Exploratory Analysis Week 1
+
+** Principles
+by Edward Tufte
+*** Show comparisons
+At least to a null hypothesis
+*** Show correlation, mechanism, explanation
+Control variable plots
+*** Show multivariate data
+Not just two variables
+*** Multiple modes of evidence
+Not just tables/plots
+*** Document the evidence
+R Code
+Readme
+How did you get to here?
+*** Content is king
+Have a story
+Does all this have a point?
+** Exploratory graphs
+*** Make these for yourself - to see what's up
+Debug analysis
+Find patterns
+Suggest modeling
+*** Make LOTS of them
+Don't worry about presentation
+** One dimensional summaries
+*** Five number summary: mean, median, min, max, quartiles, etc.
+*** Boxplot
+Broken up by quartiles
+*** Histogram
+*** Density plot
+*** Barplot
+** Multidim Plots
+http://www.r-graph-gallery.com/
+*** Overlayed plots; coplots
+*** Add colors, shapes, sizes!
+*** Spinning plots
+*** Actual 3D plots
+** Plotting systems
+*** What is the target medium? File/Screen/Print?
+*** How much data to use? Resizable?
+*** Can't mix the systems
+*** Base plotting system
+Make a simple plot with a base function
+Then add color using annotation functions
+Can't 'remove' elements; no graphical language;
+**** Packages: ~graphics~, ~grDevices~
+**** For screens mainly
+**** Make plot with: ~plot()~, ~hist()~, ~with()~, ~boxplot()~
+pch - plotting symbol
+lty - line type
+lwd - line width
+col - plotting color
+xlab - label for x-axis
+ylab - label for y-axis
+**** Define global parameters with: ~par()~
+las - orientation of the axis labels
+bg - background color
+mar - margin size
+oma - outer margin size for whole plot; outer title can go here
+mfrow - number of plots per row+column - plots fill row-wise
+mfcol - number of plots per row+column - plots fill column-wise
+**** Call ~par("arg")~ to see current value
+**** Other funcs:
+~abline~, ~lines~ add lines to plot
+~points~ add points
+~text~, ~title~, ~mtext~ to add text/titles
+~axis~ axis labels
+*** Lattice system
+'lattice' package
+One function for the whole plot at once
+Good for coplots (many plots per panel)
+It can be hard to put together all parameters at once; can't reannotate
+**** Packages: ~lattice~, ~grid~
+*** The infamous ~ggplot2~
+Grammar of graphics by Wilkinson
+Improvement over lattice; customizable defaults
+*** Graphics Devices
+~?Devices~
+**** Screen, PDF, bitmap, SVG
+x11() for linux
+**** You can open/close file graphics device
+Instead of screen, plot is generated into file
+**** Vector vs Bitmap files
+Vectors resize well
+Vector are not good for lots of points - big filesize
+SVG can do animations
+Bitmaps do not resize well 
+Bitmaps are good for color
+**** You can open multiple devices at the same time
+**** But only plot to one device at a time
+**** ~dev.cur()~ and ~dev.set()~ for multiple devices
+**** ~dev.copy()~ copy plot to another device (MIGHT DISTORT)

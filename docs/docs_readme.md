@@ -14,6 +14,7 @@
 * https://support.rstudio.com/hc/en-us
 * https://www.r-project.org/mail.html
 * https://www.r-project.org/doc/bib/R-books.html
+* http://www.r-graph-gallery.com/
 
 ## R Tools
 * Read.table package - https://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html

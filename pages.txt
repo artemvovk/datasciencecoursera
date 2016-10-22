@@ -1,0 +1,1539 @@
+
+                           Hospital Compare Downloadable Database
+Generally, health policy researchers and the media download the Hospital Compare database as
+an easy way to obtain a large set of data. The data in the Downloadable Database come from
+the data that are displayed on Hospital Compare, but also include additional information about
+the hospital ownership that is not displayed on the website. If you want information about
+hospitals in a particular geographical area, you should use the Hospital Compare tool instead of
+downloading the data.
+Note: Opening CSV files in Excel will remove leading zeros from data fields. Since some
+Hospital Provider Identification Numbers contain leading zeros, we recommend that you
+open CSV files using text editor programs such as Notepad to copy or view CSV file
+content.
+Date Refreshes: Generally, the downloadable databases are refreshed at the same time as the
+data on Hospital Compare; however, there are times when it could take an additional 24 hours to
+update.
+    • You can tell when the Hospital Compare data has been updated by looking in the bottom
+        left corner of the home page.
+    • The date the downloadable database is updated is also shown on the home page under
+        “Additional Information” on the right side of the page.
+    • The date “Modified” in the zipped file only indicates the date the data was last
+        manipulated, not the date it was posted to the site.
+You can also find Hospital Compare data on data.medicare.gov. This website allows you to view
+the data files embedded on a webpage without downloading them. The data on
+data.medicare.gov can usually be viewed the same day it has been updated on Hospital
+Compare. Use data.medicare.gov to customize views and filter the Hospital Compare data.
+Note: Beginning in July 2013, the platform for the Hospital Compare data sets will
+be data.medicare.gov. The downloadable databases will not be available after that time.
+Learn how often the data are refreshed.
+Data Collection Period for Process of Care Quality Measures and HCAHPS Patient Survey
+The collection period for the process of care quality measures is generally 12 months. As
+new measures are added, the collection period varies.
+Data Collection Period for Mortality and Readmission Quality Measures
+The collection period for the mortality and readmission measures is 36 months. The 30-day
+risk-adjusted mortality and readmission measures for heart attack, heart failure and
+pneumonia are produced from Medicare claims and enrollment data.
+Data Collection Period for Structural Measures
+Page Last Updated: July 19, 2012
+
+ The collection period for the Structural Measures is 6 months. The Structural Measures are
+ refreshed once annually.
+ Data Collection Period for Number of Medicare Patients
+ The collection period for the Number of Medicare Patients information is 12 months. The
+ Number of Medicare Patients information is refreshed once annually.
+ Data Collection Period for Medicare Payment
+ The collection period for the Medicare Payment information is 12 months. The Medicare
+ Payment information is refreshed once annually.
+ Data Collection Period for Outpatient Imaging Efficiency
+ The collection period for the Outpatient Imaging Efficiency is 12 months. The Outpatient
+ Imaging Efficiency Measures information is refreshed once annually.
+ Data Collection Period for Patient Safety Measures
+ The collection period for the Patient Safety Measures is 20 months. The Patient Safety
+ Measures information is refreshed annually.
+ There are thirty tables in the Hospital Compare database.
+    1. Agency for Healthcare and Research Quality – National.csv
+    2. Agency for Healthcare Research and Quality – State.csv
+    3. Agency for Healthcare Research and Quality.csv
+    4. HCAHPS Measures – National.csv
+    5. HCAHPS Measures – State.csv
+    6. HCAHPS Measures.csv
+    7. Healthcare_Associated_Infections.csv
+    8. Healthcare_Associated_Infections_State.csv
+    9. Hospital Acquired Condition – National.csv
+    10. Hospital Acquired Condition.csv
+    11. Hospital_Data.csv
+    12. Measure Dates.csv
+    13. Medicare Payment and Volume Measures – National.csv
+    14. Medicare Payment and Volume Measures – State.csv
+    15. Medicare Payment and Volume Measures.csv
+    16. Medicare Spending per Patient.csv
+    17. Outcome of Care Measures – National.csv
+    18. Outcome of Care Measures – State.csv
+    19. Outcome of Care Measures.csv
+    20. Outpatient Imaging Efficiency Measures – National.csv
+    21. Outpatient Imaging Efficiency Measures – State.csv
+    22. Outpatient Imaging Efficiency Measures.csv
+    23. Process of Care Measures – Children.csv
+    24. Process of Care Measures – Heart Attack.csv
+    25. Process of Care Measures – Heart Failure.csv
+    26. Process of Care Measures – National.csv
+Page Last Updated: July 19, 2012
+
+    27. Process of Care Measures – Pneumonia.csv
+    28. Process of Care Measures – SCIP.csv
+    29. Process of Care Measures – State.csv
+    30. Structural Measures.csv
+1. Agency for Healthcare Research and Quality – National.csv
+The Agency for Healthcare Research and Quality - National.csv table contains four
+(4) fields. This table provides Agency for Healthcare Research and Quality (AHRQ)
+information in response to a Hospital Compare search.
+      1. U.S. National Rate: varchar (50) Lists the national rate.
+      2. National Patient Safety Measure Performance: varchar (50) Lists the U.S. National rate
+          for the measure.
+      3. National Inpatient Quality Indicators Measure Performance: varchar (50) Lists the U.S.
+          National rate for the measure.
+      4. Measure Name: varchar (516) Lists the measure names.
+2. Agency for Healthcare Research and Quality – State.csv
+The Agency for Healthcare Research and Quality - State.csv table contains forty-
+one (41) fields. This table provides Agency for Healthcare Research and Quality
+(AHRQ) information in response to a Hospital Compare search.
+      1. State: char (2) Lists the 2 letter State code in which the hospital is located.
+      2. Worse - Deaths among Patients with Serious Treatable Complications after Surgery:
+          varchar (50) Lists how many hospitals in each state had a rate worse than the U.S.
+          National rate.
+      3. Same - Deaths among Patients with Serious Treatable Complications after Surgery:
+          varchar (50) Lists how many hospitals in each state had a rate the same as the U.S.
+          National rate.
+      4. Better - Deaths among Patients with Serious Treatable Complications after Surgery:
+          varchar (50) Lists how many hospitals in each state had a rate better than the U.S.
+          National rate.
+      5. Too few - Deaths among Patients with Serious Treatable Complications after Surgery:
+          varchar (50) Lists how many hospitals in each state had too few results to compare.
+      6. Worse - Collapsed lung due to medical treatment: varchar (50) Lists how many hospitals
+          in each state had a rate worse than the U.S. National rate.
+      7. Same - Collapsed lung due to medical treatment: varchar (50) Lists how many hospitals
+          in each state had a rate the same as the U.S. National rate.
+      8. Better - Collapsed lung due to medical treatment: varchar (50) Lists how many hospitals
+          in each state had a rate better than the U.S. National rate.
+      9. Too few - Collapsed lung due to medical treatment: varchar (50) Lists how many
+          hospitals in each state had too few results to compare.
+      10. Worse - Breathing failure after surgery: varchar (50) Lists how many hospitals in each
+          state had a rate worse than the U.S. National rate.
+Page Last Updated: July 19, 2012
+
+   11. Same - Breathing failure after surgery: varchar (50) Lists how many hospitals in each
+       state had a rate the same as the U.S. National rate.
+   12. Better - Breathing failure after surgery: varchar (50) Lists how many hospitals in each
+       state had a rate better than the U.S. National rate.
+   13. Too few - Breathing failure after surgery: varchar (50) Lists how many hospitals in each
+       state had too few results to compare.
+   14. Worse - Serious blood clots after surgery: varchar (50) Lists how many hospitals in each
+       state had a rate worse than the U.S. National rate.
+   15. Same - Serious blood clots after surgery: varchar (50) Lists how many hospitals in each
+       state had a rate the same as the U.S. National rate.
+   16. Better - Serious blood clots after surgery: varchar (50) Lists how many hospitals in each
+       state had a rate better than the U.S. National rate.
+   17. Too few - Serious blood clots after surgery: varchar (50) Lists how many hospitals in
+       each state had too few results to compare.
+   18. Worse - A wound that splits open after surgery: varchar (50) Lists how many hospitals in
+       each state had a rate worse than the U.S. National rate.
+   19. Same - A wound that splits open after surgery: varchar (50) Lists how many hospitals in
+       each state had a rate the same as the U.S. National rate.
+   20. Better - A wound that splits open after surgery: varchar (50) Lists how many hospitals in
+       each state had a rate better than the U.S. National rate.
+   21. Too few - A wound that splits open after surgery: varchar (50) Lists how many hospitals
+       in each state had too few results to compare.
+   22. Worse - Accidental cuts and tears from medical treatment: varchar (50) Lists how many
+       hospitals in each state had a rate worse than the U.S. National rate.
+   23. Same - Accidental cuts and tears from medical treatment: varchar (50) Lists how many
+       hospitals in each state had a rate the same as the U.S. National rate.
+   24. Better - Accidental cuts and tears from medical treatment: varchar (50) Lists how many
+       hospitals in each state had a rate better than the U.S. National rate.
+   25. Too few - Accidental cuts and tears from medical treatment: varchar (50) Lists how many
+       hospitals in each state had too few results to compare.
+   26. Worse - Serious Complications: varchar (50) Lists how many hospitals in each state had
+       a rate worse than the U.S. National rate.
+   27. Same - Serious Complications: varchar (50) Lists how many hospitals in each state had
+       a rate the same as the U.S. National rate.
+   28. Better - Serious Complications: varchar (50) Lists how many hospitals in each state had
+       a rate better than the U.S. National rate.
+   29. Too few - Serious Complications: varchar (50) Lists how many hospitals in each state
+       had too few results to compare.
+   30. Worse - Death after surgery to repair a weakness in the abdominal aorta: varchar (50)
+       Lists how many hospitals in each state had a rate worse than the U.S. National rate.
+   31. Same - Death after surgery to repair a weakness in the abdominal aorta: varchar (50)
+       Lists how many hospitals in each state had a rate the same as the U.S. National rate.
+   32. Better - Death after surgery to repair a weakness in the abdominal aorta: varchar (50)
+       Lists how many hospitals in each state had a rate better than the U.S. National rate.
+Page Last Updated: July 19, 2012
+
+     33. Too few - Death after surgery to repair a weakness in the abdominal aorta: varchar (50)
+         Lists how many hospitals in each state had too few results to compare.
+     34. Worse - Deaths after admission for broken hip: varchar (50) Lists how many hospitals in
+         each state had a rate worse than the U.S. National rate.
+     35. Same - Deaths after admission for broken hip: varchar (50) Lists how many hospitals in
+         each state had a rate the same as the U.S. National rate.
+     36. Better - Deaths after admission for broken hip: varchar (50) Lists how many hospitals in
+         each state had a rate better than the U.S. National rate.
+     37. Too few - Deaths after admission for broken hip: varchar (50) Lists how many hospitals
+         in each state had too few results to compare.
+     38. Worse - Deaths from Certain Conditions: varchar (50) Lists how many hospitals in each
+         state had a rate worse than the U.S. National rate.
+     39. Same - Deaths from Certain Conditions: varchar (50) Lists how many hospitals in each
+         state had a rate the same as the U.S. National rate.
+     40. Better - Deaths from Certain Conditions: varchar (50) Lists how many hospitals in each
+         state had a rate better than the U.S. National rate.
+     41. Too few - Deaths from Certain Conditions: varchar (50) Lists how many hospitals in each
+         state had too few results to compare.
+3. Agency for Healthcare Research and Quality.csv
+The Agency for Healthcare Research and Quality.csv table contains sixty (60)
+fields. This table provides Agency for Healthcare Research and Quality (AHRQ)
+information in response to a Hospital Compare search.
+     1. Provider Number: varchar (50) Lists the hospitals by their provider identification number.
+     2. Hospital Name: varchar (500) Lists the name of the hospital.
+     3. Address 1: varchar (500) Lists the first line of the street address of the hospital.
+     4. Address 2: varchar (500) Lists the second line of the street address of the hospital.
+     5. Address 3: varchar (500) Lists the third line of the street address of the hospital.
+     6. City: varchar (500) Lists the city in which the hospital is located.
+     7. State: char (2) Lists the 2 letter State code in which the hospital is located.
+     8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+     9. County Name: varchar (25) Lists the county in which the hospital is located.
+     10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+         code, for the Hospital.
+     11. Deaths among Patients with Serious Treatable Complications after Surgery: varchar (50)
+         Lists the hospital’s rate for the measure.
+     12. Collapsed lung due to medical treatment: varchar (50) Lists the hospital’s rate for the
+         measure.
+     13. Breathing failure after surgery: varchar (50) Lists the hospital’s rate for the measure.
+     14. Serious blood clots after surgery: varchar (50) Lists the hospital’s rate for the measure.
+     15. A wound that splits open after surgery: varchar (50) Lists the hospital’s rate for the
+         measure.
+     16. Accidental cuts and tears from medical treatment: varchar (50) Lists the hospital’s rate
+         for the measure.
+Page Last Updated: July 19, 2012
+
+   17. Serious Complications: varchar (50) Lists the hospital’s rate for the measure.
+   18. Death after surgery to repair a weakness in the abdominal aorta: varchar (50) Lists the
+       hospital’s rate for the measure.
+   19. Deaths after admission for broken hip: varchar (50) Lists the hospital’s rate for the
+       measure.
+   20. Deaths from Certain Conditions: varchar (50) Lists the hospital’s rate for the measure.
+   21. Number of Patients - Deaths among Patients with Serious Treatable Complications after
+       Surgery: varchar (50) Lists the patient sample size for each measure that the hospital
+       submitted.
+   22. Rate - Deaths among Patients with Serious Treatable Complications after Surgery:
+       varchar (50) Lists the rate for the measure corresponding to the hospital selected.
+   23. Lower Estimate - Deaths among Patients with Serious Treatable Complications after
+       Surgery: varchar (50) Lists the lower limit of the hospital’s 95% confidence interval.
+   24. Higher Estimate - Deaths among Patients with Serious Treatable Complications after
+       Surgery: varchar (50) Lists the upper limit of the hospital’s 95% confidence interval.
+   25. Number of Patients - Collapsed lung due to medical treatment: varchar (50) Lists the
+       patient sample size for each measure that the hospital submitted.
+   26. Rate - Collapsed lung due to medical treatment: varchar (50) Lists the rate for the
+       measure corresponding to the hospital selected.
+   27. Lower Estimate - Collapsed lung due to medical treatment: varchar (50) Lists the lower
+       limit of the hospital’s 95% confidence interval.
+   28. Higher Estimate - Collapsed lung due to medical treatment: varchar (50) Lists the upper
+       limit of the hospital’s 95% confidence interval.
+   29. Rate - Breathing failure after surgery: varchar (50) Lists the rate for the measure
+       corresponding to the hospital selected.
+   30. Number of Patients - Breathing failure after surgery: varchar (50) Lists the patient
+       sample size for each measure that the hospital submitted.
+   31. Lower Estimate - Breathing failure after surgery: varchar (50) Lists the lower limit of the
+       hospital’s 95% confidence interval.
+   32. Higher Estimate - Breathing failure after surgery: varchar (50) Lists the upper limit of the
+       hospital’s 95% confidence interval.
+   33. Number of Patients - Serious blood clots after surgery: varchar (50) Lists the patient
+       sample size for each measure that the hospital submitted.
+   34. Rate - Serious blood clots after surgery: varchar (50) Lists the rate for the measure
+       corresponding to the hospital selected.
+   35. Lower Estimate - Serious blood clots after surgery: varchar (50) Lists the lower limit of
+       the hospital’s 95% confidence interval.
+   36. Higher Estimate - Serious blood clots after surgery: varchar (50) Lists the upper limit of
+       the hospital’s 95% confidence interval.
+   37. Number of Patients - A wound that splits open after surgery: varchar (50) Lists the
+       patient sample size for each measure that the hospital submitted.
+   38. Rate - A wound that splits open after surgery: varchar (50) Lists the rate for the measure
+       corresponding to the hospital selected.
+Page Last Updated: July 19, 2012
+
+   39. Lower Estimate - A wound that splits open after surgery: varchar (50) Lists the lower limit
+       of the hospital’s 95% confidence interval.
+   40. Higher Estimate - A wound that splits open after surgery: varchar (50) Lists the upper
+       limit of the hospital’s 95% confidence interval.
+   41. Number of Patients - Accidental cuts and tears from medical treatment: varchar (50)
+       Lists the patient sample size for each measure that the hospital submitted.
+   42. Rate - Accidental cuts and tears from medical treatment: varchar (50) Lists the rate for
+       the measure corresponding to the hospital selected.
+   43. Lower Estimate - Accidental cuts and tears from medical treatment: varchar (50) Lists
+       the lower limit of the hospital’s 95% confidence interval.
+   44. Higher Estimate - Accidental cuts and tears from medical treatment: varchar (50) Lists
+       the upper limit of the hospital’s 95% confidence interval.
+   45. Number of Patients - Serious Complications: varchar (50) Lists the patient sample size
+       for each measure that the hospital submitted.
+   46. Rate - Serious Complications: varchar (50) Lists the rate for the measure corresponding
+       to the hospital selected.
+   47. Lower Estimate - Serious Complications: varchar (50) Lists the lower limit of the
+       hospital’s 95% confidence interval.
+   48. Higher Estimate - Serious Complications: varchar (50) Lists the upper limit of the
+       hospital’s 95% confidence interval.
+   49. Number of Patients - Death after surgery to repair a weakness in the abdominal aorta:
+       varchar (50) Lists the patient sample size for each measure that the hospital submitted.
+   50. Rate - Death after surgery to repair a weakness in the abdominal aorta: varchar (50)
+       Lists the rate for the measure corresponding to the hospital selected.
+   51. Lower Estimate - Death after surgery to repair a weakness in the abdominal aorta:
+       varchar (50) Lists the lower limit of the hospital’s 95% confidence interval.
+   52. Higher Estimate - Death after surgery to repair a weakness in the abdominal aorta:
+       varchar (50) Lists the upper limit of the hospital’s 95% confidence interval.
+   53. Number of Patients - Deaths after admission for broken hip: varchar (50) Lists the patient
+       sample size for each measure that the hospital submitted.
+   54. Rate - Deaths after admission for broken hip: varchar (50) Lists the rate for the measure
+       corresponding to the hospital selected.
+   55. Lower Estimate - Deaths after admission for broken hip: varchar (50) Lists the lower limit
+       of the hospital’s 95% confidence interval.
+   56. Higher Estimate - Deaths after admission for broken hip: varchar (50) Lists the upper
+       limit of the hospital’s 95% confidence interval.
+   57. Number of Patients - Deaths from Certain Conditions: varchar (50) Lists the patient
+       sample size for each measure that the hospital submitted.
+   58. Rate - Deaths from Certain Conditions: varchar (50) Lists the rate for the measure
+       corresponding to the hospital selected.
+   59. Lower Estimate - Deaths from Certain Conditions: varchar (50) Lists the lower limit of the
+       hospital’s 95% confidence interval.
+   60. Higher Estimate - Deaths from Certain Conditions: varchar (50) Lists the upper limit of
+       the hospital’s 95% confidence interval.
+Page Last Updated: July 19, 2012
+
+4. HCAHPS Measures – National.csv
+The HCAHPS Measures – National.csv table contains three (3) fields. This table provides the
+total number of patient survey topics answered nationally.
+    1. HCAHPS Question: char (100) Lists the survey topics about patients’ hospital
+        experiences. The values are listed in tables at the end of this document.
+    2. HCAHPS Answer Description: char (50) Lists the answers to the survey topics
+        about patients’ hospital experiences. The values are listed in tables at the end of
+        this document.
+    3. HCAHPS Answer Percent: char (3) Lists the percentage for each patient survey topic
+        answered.
+5. HCAHPS Measures – State.csv
+The HCAHPS Measures – State.csv table contains two (2) main fields. This table
+provides the state average for each of the patient survey topics answered.
+    1. State: (2) Lists the alphabetic postal code used to identify each individual state. All fifty
+        (50) states are listed, as well as:
+         • DC = Washington D.C.
+         • GU = Guam
+         • MP = Northern Mariana Islands
+         • PR = Puerto Rico
+         • VI = Virgin Islands
+    2. HCAHPS Survey Question/Answer Percent: char (100) Lists question topic about
+        patients’ hospital experiences in the columns with the Answer Percent as values in
+        each column. Each of the following values are column titles:
+          • Percent of patients who reported that their nurses "Sometimes" or "Never"
+              communicated well.
+          • Percent of patients who reported that their nurses "Usually" communicated
+              well.
+          • Percent of patients who reported that their nurses "Always" communicated well.
+          • Percent of patients who reported that their doctors "Sometimes" or "Never"
+              communicated well.
+          • Percent of patients who reported that their doctors "Usually" communicated well.
+          • Percent of patients who reported that their doctors "Always" communicated well.
+          • Percent of patients who reported that they "Sometimes" or "Never" received help
+              as soon as they wanted.
+          • Percent of patients who reported that they "Usually" received help as soon as
+              they wanted.
+          • Percent of patients who reported that they "Always" received help as soon as
+              they wanted.
+          • Percent of patients who reported that their pain was "Sometimes" or "Never" well
+              controlled.
+          • Percent of patients who reported that their pain was "Usually" well controlled.
+          • Percent of patients who reported that their pain was "Always" well controlled.
+Page Last Updated: July 19, 2012
+
+          •   Percent of patients who reported that staff "Sometimes" or "Never" explained
+              about medicines before giving it to them.
+          •   Percent of patients who reported that staff "Usually" explained about medicines
+              before giving it to them.
+          •   Percent of patients who reported that staff "Always" explained about medicines
+              before giving it to them.
+          •   Percent of patients who reported that their room and bathroom were
+              "Sometimes" or "Never" clean.
+          •   Percent of patients who reported that their room and bathroom were "Usually"
+              clean.
+          •   Percent of patients who reported that their room and bathroom were "Always" clean.
+          •   Percent of patients who reported that the area around their room was
+              "Sometimes" or "Never" quiet at night.
+          •   Percent of patients who reported that the area around their room was "Usually"
+              quiet at night.
+          •   Percent of patients who reported that the area around their room was "Always"
+              quiet at night.
+          •   Percent of patients who reported that YES, they were given information about
+              what to do during their recovery at home.
+          •   Percent of patients who reported that they were not given information about
+              what to do during their recovery at home.
+          •   Percent of patients who gave their hospital a rating of 6 or lower on a scale
+              from 0 (lowest) to 10 (highest).
+          •   Percent of patients who gave their hospital a rating of 7 or 8 on a scale from 0
+              (lowest) to
+              10 (highest).
+          •   Percent of patients who gave their hospital a rating of 9 or 10 on a scale from 0
+              (lowest) to
+              10 (highest).
+          •   Percent of patients who reported NO, they would not recommend the hospital.
+          •   Percent of patients who reported YES, they would probably recommend the
+              hospital.
+          •   Percent of patients who reported YES, they would definitely recommend the
+              hospital.
+6. HCAHPS Measures.csv
+The HCAHPS Measures.csv table contains fourteen (14) main fields. This table provides the
+results for each of the HCAHPS measures for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+Page Last Updated: July 19, 2012
+
+   10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+       code, for the Hospital.
+   11. HCAHPS Survey Question/Answer Percent: char (100) Lists question topic about
+       patients’ hospital experiences in the columns with the Answer Percent as values in each
+       column. Each of the following values are column titles:
+       • Percent of patients who reported that their nurses "Sometimes" or "Never"
+           communicated well.
+       • Percent of patients who reported that their nurses "Usually" communicated well.
+       • Percent of patients who reported that their nurses "Always" communicated well.
+       • Percent of patients who reported that their doctors "Sometimes" or "Never"
+           communicated well.
+       • Percent of patients who reported that their doctors "Usually" communicated well.
+       • Percent of patients who reported that their doctors "Always" communicated well.
+       • Percent of patients who reported that they "Sometimes" or "Never" received help
+           as soon as they wanted.
+       • Percent of patients who reported that they "Usually" received help as soon as they
+           wanted.
+       • Percent of patients who reported that they "Always" received help as soon as they
+           wanted.
+       • Percent of patients who reported that their pain was "Sometimes" or "Never" well
+           controlled.
+       • Percent of patients who reported that their pain was "Usually" well controlled.
+       • Percent of patients who reported that their pain was "Always" well controlled.
+       • Percent of patients who reported that staff "Sometimes" or "Never" explained about
+           medicines before giving it to them.
+       • Percent of patients who reported that staff "Usually" explained about medicines
+           before giving it to them.
+       • Percent of patients who reported that staff "Always" explained about medicines
+           before giving it to them.
+       • Percent of patients who reported that their room and bathroom were
+           "Sometimes" or "Never" clean.
+       • Percent of patients who reported that their room and bathroom were "Usually" clean.
+       • Percent of patients who reported that their room and bathroom were "Always" clean.
+       • Percent of patients who reported that the area around their room was
+           "Sometimes" or "Never" quiet at night.
+       • Percent of patients who reported that the area around their room was "Usually" quiet
+           at night.
+       • Percent of patients who reported that the area around their room was "Always" quiet
+           at night.
+       • Percent of patients who reported that YES, they were given information about what
+           to do during their recovery at home.
+       • Percent of patients who reported that they were not given information about what
+           to do during their recovery at home.
+       • Percent of patients who gave their hospital a rating of 6 or lower on a scale from 0
+           (lowest) to 10 (highest).
+       • Percent of patients who gave their hospital a rating of 7 or 8 on a scale from 0
+           (lowest) to 10 (highest).
+       • Percent of patients who gave their hospital a rating of 9 or 10 on a scale from 0
+Page Last Updated: July 19, 2012
+
+             (lowest) to 10 (highest).
+         • Percent of patients who reported NO, they would not recommend the hospital.
+         • Percent of patients who reported YES, they would probably recommend the hospital.
+         • Percent of patients who reported YES, they would definitely recommend the hospital.
+     12. Number of Completed Surveys: varchar (255) Lists the total number of patients who
+         completed a survey. The values are:
+         • 300 or More
+         • Between 100 and 299
+         • Fewer than 100
+     13. Survey Response Rate Percent: char (3) Lists the percentage of patients who
+         completed the survey.
+     14. Hospital Footnote: char (5)Lists the footnote value when appropriate, as related to the
+         hospital. The values are:
+         • Fewer than 100 patients completed the HCAHPS survey. Use these rates with
+             caution, as the number of surveys may be too low to reliably assess hospital
+             performance.
+         • Survey results are based on less than 12 months of data.
+         • Survey results are not available for this period.
+         • No patients were eligible for the HCAHPS Survey.
+         • There were discrepancies in the data collection process.
+7. Healthcare_Associated_Infections.csv
+The Agency Healthcare_Associated_Infections.csv table contains thirteen (13)
+fields. This table provides Healthcare Associated Infections (HAI) information in
+response to a Hospital Compare search.
+     1. Provider ID: varchar (50) Lists the hospitals by their provider identification number.
+     2. Hospital Name: varchar (500) Lists the name of the hospital.
+     3. Address 1: varchar (500) Lists the first line of the street address of the hospital.
+     4. Address 2: varchar (500) Lists the second line of the street address of the hospital.
+     5. Address 3: varchar (500) Lists the third line of the street address of the hospital.
+     6. City: varchar (500) Lists the city in which the hospital is located.
+     7. State: char (2) Lists the 2 letter State code in which the hospital is located.
+     8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+     9. County Name: varchar (25) Lists the county in which the hospital is located.
+     10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+         code, for the Hospital.
+     11. Measure: varchar (500) Lists the measure names.
+     12. Score: varchar (50) Lists the score for the measure.
+     13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+         values.
+8. Healthcare_Associated_Infections_State.csv
+The Agency Healthcare_Associated_Infections_State.csv table contains four (4)
+fields. This table provides Healthcare Associated Infections (HAI) information in
+response to a Hospital Compare search.
+     1. Provider ID: varchar (50) Lists the hospitals by their provider identification number.
+Page Last Updated: July 19, 2012
+
+    2. Measure: varchar (500) Lists the measure names.
+    3. Score: varchar (50) Lists the score for the measure.
+    4. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+9. Hospital Acquired Condition – National.csv
+The Hospital Acquired Condition - National.csv table contains two (2) fields. This
+table provides Hospital Acquired Condition information in response to a Hospital
+Compare search.
+     1. Measure: varchar (500) Lists the measure names.
+     2. National: Rate (per 1,000 Discharges):varchar (1) Lists the national rate.
+10. Hospital Acquired Condition.csv
+The Hospital Acquired Condition.csv table contains twelve (12) fields. This table
+provides Hospital Acquired Condition information in response to a Hospital Compare
+search.
+     1. Provider Number: varchar (50) Lists the hospitals by their provider identification number.
+     2. Hospital Name: varchar (500) Lists the name of the hospital.
+     3. Address 1: varchar (500) Lists the first line of the street address of the hospital.
+     4. Address 2: varchar (500) Lists the second line of the street address of the hospital.
+     5. Address 3: varchar (500) Lists the third line of the street address of the hospital.
+     6. City: varchar (500) Lists the city in which the hospital is located.
+     7. State: char (2) Lists the 2 letter State code in which the hospital is located.
+     8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+     9. County Name: varchar (25) Lists the county in which the hospital is located.
+     10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+         code, for the Hospital.
+     11. Measure: varchar (500) Lists the measure names.
+     12. Rate (per 1,000 Discharges): varchar (50) Lists the rate of Hospital Acquired Conditions
+         for the hospital.
+11. Hospital_Data.csv
+The Hospital_Data.csv table contains thirteen (13) fields. This table provides general
+Hospital information in response to a Hospital Compare search.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+Page Last Updated: July 19, 2012
+
+     11. Hospital Type: char (25) Lists the type of hospital. The values are:
+             a. Acute Care Hospital
+             b. Acute Care – VA Medical Center
+             c. Critical Access Hospital
+             d. Children’s Hospital
+     12. Hospital Owner: varchar (44) Lists the type of ownership the Hospital falls under. The
+         values are:
+             a. Government – Federal
+             b. Government – Hospital District or Authority
+             c. Government – Local
+             d. Government – State
+             e. Proprietary
+             f. Voluntary non-profit – Church
+             g. Voluntary non-profit – Other
+             h. Voluntary non-profit – Private
+             i. Not Available
+     13. Emergency Services: char (3) Returns “Yes” or “No” to specify whether or not the hospital
+         provides emergency services.
+12. Measure Dates.csv
+The Measure Dates.csv table contains four (5) fields. This table provides current collection dates
+for available measures included in this downloadable database.
+      1.  Measure Name: varchar (50) Lists measures by their measure code.
+      2.  Measure Start Quarter: varchar (10) Lists the starting quarter for current collection dates.
+      3.  Measure Start Date: varchar (50) Lists the starting date for current collection dates.
+      4.  Measure End Quarter: varchar (10) Lists the ending quarter for current collection dates.
+      5.  Measure End Date: varchar (50) Lists the ending date for current collection dates.
+13. Medicare Payment and Volume Measures – National.csv
+The Medicare Payment and Volume Measures – National.csv contains four (4) fields.
+This table provides the national Medicare payment range and number of cases for the
+top seventy utilized Medicare Severity-Diagnosis Related Groups.
+     1. Diagnosis Related Group: varchar (50) Lists the name of each Medicare Severity-
+         Diagnosis Related Group.
+     2. Medicare Average Payment Minimum: varchar (20) Lists the Medicare payment
+         minimum for each Medicare Severity-Diagnosis Related group nationally.
+     3. Medicare Average Payment Maximum varchar (20) Lists the Medicare payment
+         maximum for each Medicare Severity-Diagnosis Related group nationally.
+     4. Number Of Cases: varchar (4) Lists the number of cases for each Medicare Severity-
+         Diagnosis Related Group nationally.
+14. Medicare Payment and Volume Measures – State.csv
+The Medicare Payment and Volume Measures – State.csv table contains six (6) fields. This
+table provides the state Medicare payment range and number of cases for the top seventy
+utilized Medicare Severity-Diagnosis Related Groups.
+Page Last Updated: July 19, 2012
+
+    1. State: char (2) Lists the alphabetic postal code used to identify each individual state. All
+        fifty (50) states are listed, as well as:
+             • DC = Washington, D.C.
+             • GU = Guam
+             • MP = Northern Mariana Islands
+             • PR = Puerto Rico
+             • VI = Virgin Islands
+    2. Diagnosis Related Group: varchar (50) Lists the name of each Medicare Severity-
+        Diagnosis Related Group.
+    3. Medicare Average Payment Minimum: varchar (20) Lists the Medicare payment
+        minimum for each Medicare Severity-Diagnosis Related group by state.
+    4. Medicare Average Payment Maximum: varchar (20) Lists the Medicare payment
+        maximum for each Medicare Severity-Diagnosis Related group by state.
+    5. Number Of Cases: varchar (4)Lists the number of cases for each Medicare Severity-
+        Diagnosis Related Group by state.
+    6. Footnote: varchar (5) Lists the footnote value when appropriate, as related to the
+        Average Payment by state.
+15. Medicare Payment and Volume Measures.csv
+The Medicare Payment and Volume Measures.csv table contains fourteen (14) fields. This
+table provides the median Medicare payment and number of cases for each hospital, for the
+top seventy utilized Medicare Severity-Diagnosis Related Groups.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    11. Diagnosis Related Group: varchar (50) Lists the name of each Medicare Severity-
+        Diagnosis Related Group.
+    12. Medicare Average Payment: varchar (5) Lists the median Medicare payment for each
+        Medicare Severity-Diagnosis Related Group.
+    13. Number Of Cases: varchar (4) Lists the number of cases for each Medicare Severity-
+        Diagnosis Related Group where data is available (more than 11 cases).
+    14. Footnote: varchar (5) Lists the footnote value when appropriate, as related to the
+        Average Payment.
+16. Medicare Spending per Patient.csv
+The Medicare Spending per Patient.csv table contains twelve (12) fields. This table
+Page Last Updated: July 19, 2012
+
+provides the Medicare Spending per Patient ratio of hospitals compared to the national
+average.
+    1.  Hospital Name: varchar (5) lists the name of the hospital.
+    2.  Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    3.  Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    4.  Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    5.  City: varchar (28) Lists the city in which the hospital is located.
+    6.  State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    7.  ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    8.  County Name: char (15) Lists the county in which the hospital is located.
+    9.  Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    10. Measure: varchar (45) lists measure title Spending per Hospital Patient with Medicare.
+    11. Spending per Hospital Patient with Medicare: varchar (3)
+    12. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+17. Outcome of Care Measures – National.csv
+The Outcome of Care Measures – National.csv table contains three (3) fields
+    1. Condition: varchar (255) Lists the clinical condition. The values are:
+          • Heart Attack
+          • Heart Failure
+          • Pneumonia
+    2. Measure Name: varchar (100) Lists the measure names.
+            • Hospital 30-Day Death (Mortality) Rates for Heart Attack
+            • Hospital 30-Day Death (Mortality) Rates for Heart Failure
+            • Hospital 30-Day Death (Mortality) Rates for Pneumonia
+            • Hospital 30-Day Readmission Rates for Heart Attack
+            • Hospital 30-Day Readmission Rates for Heart Failure
+            • Hospital 30-Day Readmission Rates for Pneumonia
+    3. National Mortality/Readmission Rate: integer (2) The national risk-adjusted 30-Day
+        Death (mortality) rate.
+18. Outcome of Care Measures – State.csv
+The Outcome of Care Measures – State.csv table contains twenty-five (25) fields. This table
+provides the total number of Hospitals in each state that are Better, No Different, and Worse
+than the U.S. National Rate for each measure. Additionally, this table provides the total
+number of hospitals where “Number of Cases is Too Small” to tell how well the hospital is
+performing.
+1.  State: char (2) Lists the alphabetic postal code used to identify each individual state. All fifty
+    (50) states are listed, as well as:
+        a. DC = Washington, D.C.
+        b. GU = Guam
+        c. MP = Northern Mariana Islands
+        d. PR = Puerto Rico
+        e. VI = Virgin Islands
+2.  Number of Hospitals whose 30-day Death (Mortality) Rates from Heart Attack are Better
+Page Last Updated: July 19, 2012
+
+    than U.S. National Rate: integer Lists the number of hospitals for each measure/category
+    combination.
+3.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Attack are No
+    different than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+4.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Attack are Worse
+    than U.S. National Rate: integer Lists the number of hospitals for each measure/category
+    combination.
+5.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Attack are
+    Number of Cases Too Small: integer Lists the number of hospitals for each
+    measure/category combination.
+6.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Failure are Better
+    than U.S. National Rate: integer Lists the number of hospitals for each measure/category
+    combination.
+7.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Failure are No
+    different than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+8.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Failure are Worse
+    than U.S. National Rate: integer Lists the number of hospitals for each measure/category
+    combination.
+9.  Number of Hospitals whose 30-Day Death (Mortality) Rates from Heart Failure are
+    Number of Cases Too Small: integer Lists the number of hospitals for each
+    measure/category combination.
+10. Number of Hospitals whose 30-Day Death (Mortality) Rates from Pneumonia are Better
+    than U.S. National Rate: integer          Lists the  number     of  hospitals  for each
+    measure/category combination.
+11. Number of Hospitals whose 30-Day Death (Mortality) Rates from Pneumonia are No
+    different than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+12. Number of Hospitals whose 30-Day Death (Mortality) Rates from Pneumonia are Worse
+    than U.S. National Rate: integer          Lists the   number    of   hospitals for each
+    measure/category combination.
+13. Number of Hospitals whose 30-Day Death (Mortality) Rates from Pneumonia are
+    Number of Cases Too Small: integer Lists the number of hospitals for each
+    measure/category combination.
+14. Number of Hospitals whose 30-Day Readmission Rates from Heart Attack are Better
+    than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+15. Number of Hospitals whose 30-Day Readmission Rates from Heart Attack are No
+    different than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+16. Number of Hospitals whose 30-Day Readmission Rates from Heart Attack are Worse
+    than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+Page Last Updated: July 19, 2012
+
+17. Number of Hospitals whose 30-Day Readmission Rates from Heart Attack are
+    Number of Cases Too Small: integer Lists the number of hospitals for each
+    measure/category combination.
+18. Number of Hospitals whose 30-Day Readmission Rates from Heart Failure are Better
+    than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+19. Number of Hospitals whose 30-Day Readmission Rates from Heart Failure are No different
+    than U.S.: National Rate: integer Lists the number of hospitals for each measure/category
+    combination.
+20. Number of Hospitals whose 30-Day Readmission Rates from Heart Failure are
+    Worse than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+21. Number of Hospitals whose 30-Day Readmission Rates from Heart Failure are
+    Number of Cases Too Small: integer Lists the number of hospitals for each
+    measure/category combination.
+22. Number of Hospitals whose 30-Day Readmission Rates from Pneumonia are Better
+    than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+23. Number of Hospitals whose 30-Day Readmission Rates from Pneumonia are No
+    different than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+24. Number of Hospitals whose 30-Day Readmission Rates from Pneumonia are Worse
+    than U.S. National Rate: integer Lists the number of hospitals for each
+    measure/category combination.
+25. Number of Hospitals whose 30-Day Readmission Rates from Pneumonia are Number of
+    Cases Too Small: integer Lists the number of hospitals for each measure/category
+    combination.
+19. Outcome of Care Measures.csv
+The Outcome of Care Measures.csv table contains forty seven (47) fields. This table provides
+each hospital’s risk-adjusted 30-Day Death (mortality) and 30-Day Readmission category and
+rate.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+         code, for the Hospital.
+    11. Hospital 30-Day Death (Mortality) Rates from Heart Attack: Lists the risk adjusted rate
+         (percentage) for each hospital.
+    12. Comparison to U.S. Rate - Hospital 30-Day Death (Mortality) Rates from Heart
+Page Last Updated: July 19, 2012
+
+       Attack: varchar (50) Lists the mortality and readmission category in which the
+       hospital falls. The values are:
+           • Better than U.S. National Average
+           • No Different than U.S. National Average
+           • Worse than U.S. National Average
+           • Number of Cases too Small*
+   13. Lower Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Heart Attack:
+       Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   14. Upper Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Heart Attack:
+       Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   15. Number of Patients - Hospital 30-Day Death (Mortality) Rates from Heart Attack:
+       varchar (5) Lists the number of Medicare patients treated for Heart Attack by the
+       Hospital.
+   16. Footnote - Hospital 30-Day Death (Mortality) Rates from Heart Attack: Lists the
+       footnote value when appropriate, as related to the Heart Attack Outcome of Care at
+       the hospital.
+   17. Hospital 30-Day Death (Mortality) Rates from Heart Failure: Lists the risk adjusted rate
+       (percentage) for each hospital.
+   18. Comparison to U.S. Rate - Hospital 30-Day Death (Mortality) Rates from Heart
+       Failure: varchar (50) Lists the mortality and readmission category in which the
+       hospital falls. The values are:
+       a. Better than U.S. National Average
+       b. No Different than U.S. National Average
+       c. Worse than U.S. National Average
+       d. Number of Cases too Small*
+   19. Lower Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Heart
+       Failure: Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted
+       rate.
+   20. Upper Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Heart
+       Failure: Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted
+       rate.
+   21. Number of Patients - Hospital 30-Day Death (Mortality) Rates from Heart Failure:
+       varchar (5) Lists the number of Medicare patients treated for Heart Failure by the
+       Hospital.
+   22. Footnote - Hospital 30-Day Death (Mortality) Rates from Heart Failure: Lists the
+       footnote value when appropriate, as related to the Heart Failure Outcome of Care at
+       the hospital.
+   23. Hospital 30-Day Death (Mortality) Rates from Pneumonia: Lists the risk adjusted rate
+       (percentage) for each hospital.
+   24. Comparison to U.S. Rate - Hospital 30-Day Death (Mortality) Rates from Pneumonia:
+       varchar (50) Lists the mortality and readmission category in which the hospital falls. The
+       values are:
+       • Better than U.S. National Average
+       • No Different than U.S. National Average
+       • Worse than U.S. National Average
+       • Number of Cases too Small*
+   25. Lower Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Pneumonia:
+       Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+Page Last Updated: July 19, 2012
+
+   26. Upper Mortality Estimate - Hospital 30-Day Death (Mortality) Rates from Pneumonia:
+       Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   27. Number of Patients - Hospital 30-Day Death (Mortality) Rates from Pneumonia:
+       varchar (5) Lists the number of Medicare patients treated for Pneumonia by the
+       Hospital.
+   28. Footnote - Hospital 30-Day Death (Mortality) Rates from Pneumonia: Lists the
+       footnote value when appropriate, as related to the Pneumonia Outcome of Care at
+       the hospital.
+   29. Hospital 30-Day Readmission Rates from Heart Attack: Lists the risk adjusted rate
+       (percentage) for each hospital.
+   30. Comparison to U.S. Rate - Hospital 30-Day Readmission Rates from Heart Attack:
+       varchar (50) Lists the mortality and readmission category in which the hospital falls.
+       The values are:
+       • Better than U.S. National Average
+       • No Different than U.S. National Average
+       • Worse than U.S. National Average
+       • Number of Cases too Small*
+   32. Lower Readmission Estimate - Hospital 30-Day Readmission Rates from Heart
+       Attack: Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   33. Upper Readmission Estimate - Hospital 30-Day Readmission Rates from Heart
+       Attack: Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   34. Number of Patients - Hospital 30-Day Readmission Rates from Heart Attack: varchar
+       (5) Lists the number of Medicare patients treated for Heart Attack.
+   35. Footnote - Hospital 30-Day Readmission Rates from Heart Attack: Lists the footnote
+       value when appropriate, as related to the Heart Attack Outcome of Care at the hospital.
+   36. Hospital 30-Day Readmission Rates from Heart Failure: Lists the risk adjusted rate
+       (percentage) for each hospital.
+   37. Comparison to U.S. Rate - Hospital 30-Day Readmission Rates from Heart Failure:
+       varchar (50) Lists the mortality and readmission category in which the hospital falls.
+       The values are:
+           • Better than U.S. National Average
+           • No Different than U.S. National Average
+           • Worse than U.S. National Average
+           • Number of Cases too Small*
+   38. Lower Readmission Estimate - Hospital 30-Day Readmission Rates from Heart
+       Failure: Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   39. Upper Readmission Estimate - Hospital 30-Day Readmission Rates from Heart
+       Failure: Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+   40. Number of Patients - Hospital 30-Day Readmission Rates from Heart Failure: varchar
+       (5) Lists the number of Medicare patients treated for Heart Failure.
+   41. Footnote - Hospital 30-Day Readmission Rates from Heart Failure: Lists the footnote
+       value when appropriate, as related to the Heart Failure Outcome of Care at the hospital.
+   42. Hospital 30-Day Readmission Rates from Pneumonia: Lists the risk adjusted rate
+       (percentage) for each hospital.
+   43. Comparison to U.S. Rate - Hospital 30-Day Readmission Rates from Pneumonia:
+       varchar (50) Lists the mortality and readmission category in which the hospital falls. The
+       values are:
+Page Last Updated: July 19, 2012
+
+             •   Better than U.S. National Average
+             •   No Different than U.S. National Average
+             •   Worse than U.S. National Average
+             •   Number of Cases too Small*
+    44. Lower Readmission Estimate - Hospital 30-Day Readmission Rates from Pneumonia:
+        Lists the lower bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+    45. Upper Readmission Estimate - Hospital 30-Day Readmission Rates from Pneumonia:
+        Lists the upper bound (Interval Estimate) for each hospital’s risk-adjusted rate.
+    46. Number of Patients - Hospital 30-Day Readmission Rates from Pneumonia: varchar
+        (5) Lists the number of Medicare patients treated for Pneumonia.
+    47. Footnote - Hospital 30-Day Readmission Rates from Pneumonia: Lists the footnote
+        value when appropriate, as related to the Pneumonia Outcome of Care at the hospital.
+20. Outpatient Imaging Efficiency Measures – National.csv
+ The Outpatient Imaging Efficiency Measures.csv table contains two (2) fields. This
+ table provides the quality measure scores for each hospital that reported information.
+     1. Measure Name: varchar (100) Lists the measure names
+     2. Score varchar (4) Lists the score for the measure.
+21. Outpatient Imaging Efficiency Measures – State.csv
+The Outpatient Imaging Efficiency Measures.csv table contains seven (7) fields. This
+table provides the quality measure scores for each state.
+    1. State: char (2) Lists the alphabetic postal code used to identify each individual state. All
+        fifty (50) states are listed, as well as:
+             a. DC = Washington, D.C.
+             b. GU = Guam
+             c. MP = Northern Mariana Islands
+             d. PR = Puerto Rico
+             e. VI = Virgin Islands
+    2. Outpatients with low back pain who had an MRI without trying recommended
+        treatments first such as physical therapy.: varchar (4) Lists the score for the
+        measure corresponding to each state.
+    3. Outpatients who had a follow-up mammogram or ultrasound within 45 days after a
+        screening mammogram.: varchar (4) Lists the score for the measure corresponding to
+        each state.
+    4. Outpatient CT scans of the abdomen that were combination (double) scans.: varchar
+        (4) Lists the score for the measure corresponding to each state.
+    5. Outpatient CT scans of the chest that were combination (double) scans..: varchar (4)
+        Lists the score for the measure corresponding to each state.
+    6. Outpatients who got cardiac imaging stress tests before low-risk outpatient surgery…:
+        varchar (4) Lists the score for the measure corresponding to each state
+    7. Outpatients with brain CT scans who got a sinus CT scan at the same time…: varchar
+        (4) Lists the score for the measure corresponding to each state
+22. Outpatient Imaging Efficiency Measures.csv
+The Outpatient Imaging Efficiency Measures.csv table contains twenty-six (26) fields. This table
+Page Last Updated: July 19, 2012
+
+provides the quality measure scores for each hospital that reported information.
+   1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+   2. Hospital Name: varchar (50) Lists the name of the hospital.
+   3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+   4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+   5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+   6. City: varchar (28) Lists the city in which the hospital is located.
+   7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+   8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+   9. County Name: char (15) Lists the county in which the hospital is located.
+   10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+       code, for the Hospital.
+   11. Outpatients with low back pain who had an MRI without trying recommended
+       treatments first such as physical therapy.: varchar (4) Lists the score for the
+       measure corresponding to the hospital selected.
+   12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   14. Outpatients who had a follow-up mammogram or ultrasound within 45 days after a
+       screening mammogram.: varchar (4) Lists the score for the measure corresponding to
+       the hospital selected.
+   15. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   17. Outpatient CT scans of the abdomen that were combination (double) scans.: varchar (4)
+       Lists the score for the measure corresponding to the hospital selected.
+   18. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   20. Outpatient CT scans of the chest that were combination (double) scans..: varchar (4)
+       Lists the score for the measure corresponding to the hospital selected.
+   21. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   22. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   23. Outpatients who got cardiac imaging stress tests before low-risk outpatient surgery…:
+       varchar (4) Lists the score for the measure corresponding to each state
+   24. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   25. Outpatients with brain CT scans who got a sinus CT scan at the same time…: varchar
+       (4) Lists the score for the measure corresponding to each state
+   26. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values
+Page Last Updated: July 19, 2012
+
+23. Process of Care Measures – Children.csv
+The Process of Care Measures – Children.csv table contains nineteen (19) fields. This table
+provides the quality measure scores for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    11. Percent of Children Who Received Reliever Medication While Hospitalized for Asthma:
+        varchar (4) Lists the score (percentage) for the measure corresponding to the hospital
+        selected.
+    12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    14. Percent of Children Who Received Systemic Corticosteroid Medication While
+        Hospitalized for Asthma: varchar (4) Lists the score (percentage) for the measure
+        corresponding to the hospital selected.
+    15. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    17. Percent of Children and their Caregivers Who Received a Home Management
+        Plan of Care Document While Hospitalized for Asthma: varchar (4) Lists the
+        score (percentage) for the measure corresponding to the hospital selected.
+    18. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+24. Process of Care Measures – Heart Attack.csv
+The Process of Care Measures – Heart Attack.csv table contains forty-nine (49) fields. This
+table provides the quality measure scores for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+Page Last Updated: July 19, 2012
+
+   8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+   9. County Name: char (15) Lists the county in which the hospital is located.
+   10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+       code, for the Hospital.
+   11. Percent of Heart Attack Patients Given Aspirin at Arrival: Lists the score (percentage) for
+       the measure corresponding to the hospital selected.
+   12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   14. Percent of Heart Attack Patients Given Aspirin at Discharge: Lists the score
+       (percentage) for the measure corresponding to the hospital selected.
+   15. Number of Patients: varchar (12) Lists the patient sample size for each measure that   the
+       hospital submitted.
+   16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for    the
+       values.
+   17. Percent of Heart Attack Patients Given ACE Inhibitor or ARB for Left
+       Ventricular Systolic Dysfunction (LVSD): Lists the score (percentage) for the
+       measure corresponding to the hospital selected.
+   18. Number of Patients: varchar (12) Lists the patient sample size for each measure that   the
+       hospital submitted.
+   19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for    the
+       values.
+   20. Percent of Heart Attack Patients Given Beta Blocker at Discharge: Lists the score
+       (percentage) for the measure corresponding to the hospital selected.
+   21. Number of Patients: varchar (12) Lists the patient sample size for each measure that   the
+       hospital submitted.
+   22. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for    the
+       values.
+   23. Percent of Heart Attack Patients Given Smoking Cessation Advice/Counseling: Lists
+       the score (percentage) for the measure corresponding to the hospital selected.
+   24. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   25. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   26. Percent of Heart Attack Patients Given Fibrinolytic Medication Within 30 Minutes Of
+       Arrival: Lists the score (percentage) for the measure corresponding to the hospital
+       selected.
+   27. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   28. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+       values.
+   29. Percent of Heart Attack Patients Given PCI Within 90 Minutes Of Arrival: Lists the
+       score (percentage) for the measure corresponding to the hospital selected.
+   30. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+       hospital submitted.
+   31. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+Page Last Updated: July 19, 2012
+
+        values.
+    32. Average number of minutes before outpatients with chest pain or possible heart
+        attack got an ECG: Lists the score (minutes) for the measure corresponding to the
+        hospital selected.
+    33. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    34. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    35. Average number of minutes before outpatients with chest pain or possible heart
+        attack were transferred to another hospital: Lists the score (minutes) for the
+        measure corresponding to the hospital selected.
+    36. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    37. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    38. Median Time to Fibrinolysis: Lists the score (minutes) for the measure corresponding to
+        the hospital selected.
+    39. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    40. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    41. Outpatients with chest pain or possible heart attack who got aspirin within 24 hours of
+        arrival: Lists the score for the measure corresponding to the hospital selected.
+    42. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    43. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    44. Outpatients with chest pain or possible heart attack who got drugs to break up blood
+        clots within 30 minutes of arrival: Lists the score for the measure corresponding to the
+        hospital selected.
+    45. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    46. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    47. Heart Attack Patients Given a Prescription for a Statin at Discharge: Lists the number
+        (percent) of patients that received a Statin upon discharge from the hospital.
+    48. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    49. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+25. Process of Care Measures – Heart Failure.csv
+The Process of Care Measures – Heart Failure.csv table contains twenty-two (22) fields. This
+table provides the quality measure scores for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+Page Last Updated: July 19, 2012
+
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    11. Percent of Heart Failure Patients Given an Evaluation of Left Ventricular Systolic
+        (LVS) Function: Lists the score (percentage) for the measure corresponding to the
+        hospital selected.
+    12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    14. Percent of Heart Failure Patients Given ACE Inhibitor or ARB for Left
+        Ventricular Systolic Dysfunction (LVSD): Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    15. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    17. Percent of Heart Failure Patients Given Discharge Instructions: Lists the score
+        (percentage) for the measure corresponding to the hospital selected.
+    18. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    20. Percent of Heart Failure Patients Given Smoking Cessation Advice/Counseling: Lists
+        the score (percentage) for the measure corresponding to the hospital selected.
+    21. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    22. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+26. Process of Care Measures – National.csv
+    1. Condition: (29) Lists the clinical condition. The values are:
+            • Heart Attack
+            • Heart Failure
+            • Pneumonia
+            • Surgical Care Improvement
+            • Children’s Asthma Care
+    2. Category
+            • Children’s Asthma Care
+            • Heart Attack
+            • Heart Failure
+Page Last Updated: July 19, 2012
+
+            • Pneumonia
+            • Surgical Infection Prevention
+    4. Measure Name:
+            • Top 10% of Hospitals submitting data scored equal to or higher than:
+            • National Average of Hospitals submitting data:
+    5. National Mortality/Readmission Rate: (4) Lists the top 10% and national score for each
+        measure.
+27. Process of Care Measures – Pneumonia.csv
+The Process of Care Measures – Pneumonia.csv table contains twenty-eight (28) fields. This
+table provides the quality measure scores for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including
+        area code, for the Hospital.
+    11. Percent of Pneumonia Patients Assessed and Given Pneumococcal Vaccination: Lists
+        the score (percentage) for the measure corresponding to the hospital selected.
+    12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    14. Percent of Pneumonia Patients Given Initial Antibiotic(s) within 6 Hours After Arrival:
+        Lists the score (percentage) for the measure corresponding to the hospital selected.
+    15. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    17. Percent of Pneumonia Patients Whose Initial ER Blood Culture Was Performed Prior
+        To Administration Of First Dose Of Antibiotics: Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    18. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    20. Percent of Pneumonia Patients Given Smoking Cessation Advice/Counseling: Lists the
+        score (percentage) for the measure corresponding to the hospital selected.
+    21. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    22. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+Page Last Updated: July 19, 2012
+
+        values.
+    23. Percent of Pneumonia Patients Given the Most Appropriate Initial Antibiotic(s): Lists the
+        score (percentage) for the measure corresponding to the hospital selected.
+    24. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    25. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    26. Percent of Pneumonia Patients Assessed and Given Influenza Vaccination: Lists the
+        score (percentage) for the measure corresponding to the hospital selected.
+    27. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    28. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+28. Process of Care Measures – SCIP.csv
+The Process of Care Measures – Surgery.csv table contains thirty-seven (37) fields. This table
+provides the quality measure scores for each hospital that reported information.
+    1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+    2. Hospital Name: varchar (50) Lists the name of the hospital.
+    3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+    4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    11. Percent of Surgery Patients given an antibiotic at the right time (within one hour
+        before surgery) to help prevent infection: Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    12. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    13. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    14. Percent of Surgery Patients whose preventive antibiotics were stopped at the right
+        time (within 24 hours after surgery): Lists the score (percentage) for the measure
+        corresponding to the hospital selected.
+    15. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    16. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    17. Percent of Surgery Patients who were given the right kind of antibiotic to help prevent
+        infection: Lists the score (percentage) for the measure corresponding to the hospital
+        selected.
+    18. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+Page Last Updated: July 19, 2012
+
+        hospital submitted.
+    19. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    20. Percent of Surgery Patients who got treatment at right time (within 24 hours before or
+        after surgery) to help prevent blood clot: Lists the score (percentage) for the measure
+        corresponding to the hospital selected.
+    21. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    22. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    23. Percent of Surgery Patients whose doctors ordered treatments to prevent blood clots
+        after certain types of surgeries: Lists the score (percentage) for the measure
+        corresponding to the hospital selected.
+    24. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    25. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    26. Percent of all Heart Surgery Patients whose blood sugar is kept under good control
+        in the days right after surgery: Lists the score (percentage) for the measure
+        corresponding to the hospital selected.
+    27. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    28. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    29. Percent of Surgery Patients needing hair removed from the surgical area before surgery
+        who had hair removed using a safer method: Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    30. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    31. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    32. Percent of Surgery Patients who were taking beta blockers before coming to the
+        hospital, who were kept on the beta blockers: Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    33. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    34. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+    35. Patients having surgery who were actively warmed in the operating room or whose body
+        temperature was near normal by the end of surgery: Lists the score (percentage) for the
+        measure corresponding to the hospital selected.
+    36. Number of Patients: varchar (12) Lists the patient sample size for each measure that the
+        hospital submitted.
+    37. Footnote: (1) Lists the footnote value when appropriate. See the footnote table for the
+        values.
+29. Process of Care Measures – State.csv
+The Process of Care Measures – State.csv table contains thirty-six (36) fields. This table
+provides the State average for each hospital process of care quality measure.
+Page Last Updated: July 19, 2012
+
+   1. State: char (2) Lists the alphabetic postal code used to identify each individual state. All
+       fifty (50) states are listed, as well as:
+            • DC = Washington, D.C.
+            • GU = Guam
+            • MP = Northern Mariana Islands
+            • PR = Puerto Rico
+            • VI = Virgin Islands
+   2. Percent of Heart Attack Patients Given Aspirin at Arrival: char (3) Lists the measure
+       average for each State.
+   3. Percent of Heart Attack Patients Given Aspirin at Discharge: char (3) Lists the
+       measure average for each State.
+   4. Percent of Heart Attack Patients Given ACE Inhibitor or ARB for Left
+       Ventricular Systolic Dysfunction (LVSD) : char (3) Lists the measure average
+       for each State.
+   5. Percent of Heart Attack Patients Given Beta Blocker at Discharge: char (3) Lists the
+       measure average for each State.
+   6. Percent of Heart Attack Patients Given Smoking Cessation Advice/Counseling: char
+       (3) Lists the measure average for each State.
+   7. Percent of Heart Attack Patients Given Fibrinolytic Medication Within 30 Minutes Of
+       Arrival: char (3) Lists the measure average for each State.
+   8. Percent of Heart Attack Patients Given PCI Within 90 Minutes Of Arrival: char (3)
+       Lists the measure average for each State.
+   9. Percent of Heart Failure Patients Given an Evaluation of Left Ventricular Systolic
+       (LVS) Function: char (3) Lists the measure average for each State.
+   10. Percent of Heart Failure Patients Given ACE Inhibitor or ARB for Left Ventricular
+       Systolic Dysfunction (LVSD): char (3) Lists the measure average for each State.
+   11. Percent of Heart Failure Patients Given Discharge Instructions: char (3) Lists the
+       measure average for each State.
+   12. Percent of Heart Failure Patients Given Smoking Cessation Advice/Counseling: char (3)
+       Lists the measure average for each State.
+   13. Percent of Pneumonia Patients Assessed and Given Pneumococcal Vaccination: char (3)
+       Lists the measure average for each State.
+   14. Percent of Pneumonia Patients Given Initial Antibiotic(s) within 6 Hours After Arrival: char
+       (3) Lists the measure average for each State.
+   15. Percent of Pneumonia Patients Whose Initial ER Blood Culture Was Performed
+       Prior To Administration Of First Dose Of Antibiotics: char (3) Lists the measure
+       average for each State.
+   16. Percent of Pneumonia Patients Given Smoking Cessation Advice/Counseling: char (3)
+       Lists the measure average for each State.
+   17. Percent of Pneumonia Patients Given the Most Appropriate Initial Antibiotic(s) : char (3)
+       Lists the measure average for each State.
+   18. Percent of Pneumonia Patients Assessed and Given Influenza Vaccination: char (3)
+       Lists the measure average for each State.
+   19. Percent of Surgery Patients given an antibiotic at the right time (within one hour
+       before surgery) to help prevent infection: char (3) Lists the measure average for each
+       State.
+   20. Percent of Surgery Patients whose preventive antibiotics were stopped at the right time
+Page Last Updated: July 19, 2012
+
+       (within
+       24 hours after surgery) : char (3) Lists the measure average for each State.
+   21. Percent of Surgery Patients who were given the right kind of antibiotic to help
+       prevent infection: char (3) Lists the measure average for each State.
+   22. Percent of Surgery Patients who got treatment at right time (within 24 hours before or
+       after surgery) to help prevent blood clot: char (3) Lists the measure average for each
+       State.
+   23. Percent of Surgery Patients whose doctors ordered treatments to prevent blood clots
+       after certain types of surgeries: char (3) Lists the measure average for each State.
+   24. Percent of all Heart Surgery Patients whose blood sugar is kept under good control in the
+       days right after surgery: char (3) Lists the measure average for each State.
+   25. Percent of Surgery Patients needing hair removed from the surgical area before
+       surgery who had hair removed using a safer method: char (3) Lists the measure
+       average for each State.
+   26. Percent of Surgery Patients who were taking beta blockers before coming to the
+       hospital, who were kept on the beta blockers: char (3) Lists the measure average for
+       each State.
+   27. Percent of Children Who Received Reliever Medication While Hospitalized for Asthma:
+       char (3) Lists the measure average for each State.
+   28. Percent of Children Who Received Systemic Corticosteroid Medication While
+       Hospitalized for Asthma: char (3) Lists the measure average for each State.
+   29. Percent of Children and their Caregivers Who Received a Home Management Plan of
+       Care Document While Hospitalized for Asthma: char (3) Lists the measure average for
+       each State.
+   30. Average number of minutes before outpatients with chest pain or possible heart
+       attack got an ECG: char (3) Lists the measure average for each State.
+   31. Average number of minutes before outpatients with chest pain or possible heart
+       attack were transferred to another hospital: char (3) Lists the measure average for
+       each State.
+   32. Median Time to Fibrinolysis: char (3) Lists the measure average for each State.
+   33. Median Outpatients with chest pain or possible heart attack who got aspirin within 24
+       hours of arrival: char (3) Lists the measure average for each State.
+   34. Outpatients with chest pain or possible heart attack who got drugs to break up blood clots
+       within 30 minutes of arrival: char (3) Lists the measure average for each State.
+   35. Heart Attack Patients Given a Prescription for a Statin at Discharge: char (3) Lists the
+       measure average for each state.
+   36. Patients having surgery who were actively warmed in the operating room or whose body
+       temperature was near normal: char (3) Lists the measure average for each state.
+   29. Structural Measures.csv
+   The Structural Measures.csv table contains twelve (12) fields.
+   1. Provider Number: varchar (6) Lists the hospitals by their provider identification number.
+   2. Hospital Name: varchar (50) Lists the name of the hospital.
+   3. Address 1: varchar (50) Lists the first line of the street address of the hospital.
+   4. Address 2: varchar (50) Lists the second line of the street address of the hospital.
+Page Last Updated: July 19, 2012
+
+    5. Address 3: varchar (50) Lists the third line of the street address of the hospital.
+    6. City: varchar (28) Lists the city in which the hospital is located.
+    7. State: varchar (2) Lists the 2 letter State code in which the hospital is located.
+    8. ZIP Code: char (5) Lists the 5 digit numeric ZIP for the hospital.
+    9. County Name: char (15) Lists the county in which the hospital is located.
+    10. Phone Number: char (10) Lists the 10-digit numeric telephone number, including area
+        code, for the Hospital.
+    11. Measure Name: varchar (255) Lists the measure names, see chart at the end of this
+        document.
+    12. Measure Response: varchar (50) Lists the cardiac surgery registry participation
+        reponses. The values are:
+            • Yes
+            • No
+            • Does not have a Cardiac Surgery Program
+            • Not Available
+ Process of Care Quality Measures Chart Total Measures = 37
+ (For the complete measure specifications see the Specifications Manual for National Hospital
+ Quality Measures at www.qualitynet.org)
+ Condition – Acute Myocardial Infarction (Heart Attack)            Total Measures = 13
+ Measure                                                Acronym          Add Date      Starter Set
+ Patients Given Aspirin at Arrival                      AMI 1            Nov 2004      Yes
+ Patients Given Aspirin at Discharge                    AMI 2            Nov 2004      Yes
+ Patients Given ACE Inhibitor or ARB for Left           AMI 3            Nov 2004      Yes
+ Ventricular Systolic Dysfunction (LVSD)
+ Patients Given Smoking Cessation                       AMI 4            Apr 2005      No
+ Advice/Counseling
+ Patients Given Beta Blocker at Discharge               AMI 5            Nov 2004      Yes
+ Patients Given Fibrinolytic Medication Within 30       AMI 7            Apr 2005      No
+ Minutes Of Arrival
+ Patients Given PCI Within 90 Minutes Of Arrival        AMI 8            Apr 2005      No
+ Median Time to Fibrinolysis                            OP_1             Jun 2010      No
+ Outpatients with chest pain or possible heart          OP_2             Jun 2010      No
+ attack who got drugs to break up blood clots
+ within 30 minutes of arrival (higher numbers
+ are better)
+ Average number of minutes before outpatients           OP_3             Jun 2010      No
+ with chest pain or possible heart attack who
+ needed specialized care were transferred to
+ another hospital (a lower number of minutes is
+ better)
+ Outpatients with chest pain or possible heart          OP_4             Jun 2010      No
+ attack who got aspirin within 24 hours of
+ arrival (higher numbers are better)
+ Average number of minutes before outpatients           OP_5             Jun 2010      No
+Page Last Updated: July 19, 2012
+
+ with chest pain or possible heart attack got an
+ ECG (a lower number of minutes is better)
+ Heart Attack Patients Given a Prescription for a
+ Statin at Discharge                              AMI 10     Jan 2012   No
+ Condition – Heart Failure Total Measures = 4
+ Measure                                           Acronym     Add Date  Starter Set
+ Patients Given ACE Inhibitor or ARB for Left      HF 3        Nov 2004  Yes
+ Ventricular Systolic Dysfunction (LVSD)
+ Patients Given An Evaluation of Left Ventricular  HF2         Nov 2004  Yes
+ Systolic (LVS) Function
+ Patients Given Discharge Instructions             HF 1        Apr 2005  No
+ Patients Given Smoking Cessation                  HF 4        Apr 2005  No
+ Advice/Counseling
+ Condition – Pneumonia Total Measures = 6
+ Measure                                           Acronym     Add Date  Starter Set
+ Pneumonia Patients Assessed and Given             PN 7       Dec 2006   No
+ Influenza Vaccination
+ Patients Assessed and Given Pneumococcal          PN 2       Nov 2004   Yes
+ Vaccination
+ Patients Given Initial Antibiotic(s) within 6     PN 5       Nov 2004   Yes
+ Hours After Arrival
+ Patients Given Smoking Cessation                  PN 4       Apr 2005   No
+ Advice/Counseling
+ Patients Given the Most Appropriate Initial       PN 6       Sep        No
+ Antibiotic(s)                                                2005
+ Patients Whose Initial Emergency Room Blood       PN 3       Apr 2005   No
+ Culture Was Performed Prior to the
+ Administration of the First Hospital Dose of
+ Antibiotics
+ Condition – Surgical Care Improvement (SCIP)     Total Measures = 11
+ Measure                                           Acronym    Add Date   Starter Set
+ Surgery Patients Who Received Preventative        SCIP 1     Sep 2005   No
+ Antibiotic(s) One Hour Before Incision
+ Percent of Surgery Patients who Received the      SCIP 2     Jun 2007   No
+ Appropriate Preventative Antibiotic(s) for Their
+ Surgery
+ Surgery Patients Whose Preventative               SCIP 3     Sep 2005   No
+ Antibiotic(s) are Stopped Within 24 hours After
+ Surgery
+ Surgery Patients Whose Doctors Ordered            SCIP       Dec 2007   No
+ Treatments to Prevent Blood Clots (Venous         VTE 1
+ Thromboembolism) For Certain Types of
+ Surgeries
+Page Last Updated: July 19, 2012
+
+ Surgery Patients Who Received Treatment               SCIP     Dec 2007       No
+ To Prevent Blood Clots Within 24 Hours Before         VTE 2
+ or after Selected Surgeries to Prevent Blood
+ Clots
+ Cardiac Surgery Patients With Controlled 6 A.M.       SCIP 4   Dec 2008       No
+ Postoperative Blood Glucose
+ Surgery Patients with Appropriate Hair Removal        SCIP 6   Dec 2008       No
+ Percent of surgery patients who were taking           SCIP     Dec 2009       No
+ heart drugs called beta blockers before coming        CARD 2
+ to the hospital, who were kept on the beta
+ blockers during the period just before and after
+ their surgery
+ Outpatients having surgery who got an                 OP_6     Jun 2010       No
+ antibiotic at the right time - within one hour
+ before surgery (higher numbers are better)
+ Outpatients having surgery who got the right          OP_7     Jun 2010       No
+ kind of antibiotic (higher numbers are better)
+ Patients having surgery who were actively
+ warmed in the operating room or whose body
+ temperature was near normal by the end of
+ surgery.                                             SCIP 10  Jan 2012       No
+ Condition – Children’s Asthma Care         Total Measures = 3
+ Measure                                               Acronym  Add Date       Starter Set
+ Percent of Children Who Received Reliever             CAC 1    Aug 2008       No
+ Medication While Hospitalized for Asthma
+ Percent of Children Who Received Systemic             CAC 2    Aug 2008       No
+ Corticosteroid Medication (oral and IV
+ Medication That Reduces Inflammation and
+ Controls Symptoms) While Hospitalized for
+ Asthma
+ Percent of Children and their Caregivers Who          CAC 3    Sep 2009       No
+ Received a Home Management plan of Care
+ Document While Hospitalized for Asthma
+ Use of Medical Imaging                                              Total Measures = 6
+ Measure                                                        Acronym Add Date Starter
+                                                                                     Set?
+Outpatients with low back pain who had an MRI without trying   OP_8       June 2010    No
+recommended treatments first, such as physical therapy. (If a
+number is high, it may mean the facility is doing too many
+unnecessary MRIs for low back pain.)
+Outpatients who had a follow-up mammogram or ultrasound        OP_9       June 2010    No
+within 45 days after a screening mammogram. (A number that is
+much lower than 8% may mean there’s not enough follow-up. A
+number much higher than 14% may mean there’s too much
+unnecessary follow-up.)
+Page Last Updated: July 19, 2012
+
+Outpatient CT scans of the chest that were “combination”         OP_11 June 2010 No
+(double) scans. (The range for this measure is 0 to 1. A number
+very close to 1 may mean that too many patients are being
+given a double scan when a single scan is all they need.)
+Outpatient CT scans of the abdomen that were “combination”       OP_10 June 2010 No
+(double) scans. (The range for this measure is 0 to 1. A number
+very close to 1 may mean that too many patients are being
+given a double scan when a single scan is all they need.)
+Outpatients who got cardiac imaging stress tests before low-risk OP_13 July 2012 No
+outpatient surgery.
+Outpatients with brain CT scans who got a sinus CT scan at the   OP_14 July 2012 No
+same time.
+Page Last Updated: July 19, 2012
+
