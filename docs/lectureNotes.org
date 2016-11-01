@@ -190,8 +190,7 @@ node[@attr-name='foo'] - node with attribute name set to 'foo'
 *** Images - jpeg; readbitmap; png; EBImage;
 *** GIS - rdgal; rgeos; raster; 
 *** Music - tuneR; seewave;
-* Exploratory Analysis Week 1
-
+* Exploratory Analysis
 ** Principles
 by Edward Tufte
 *** Show comparisons
@@ -261,13 +260,54 @@ mfcol - number of plots per row+column - plots fill column-wise
 ~axis~ axis labels
 *** Lattice system
 'lattice' package
-One function for the whole plot at once
-Good for coplots (many plots per panel)
+**** One function for the whole load of plots at once
 It can be hard to put together all parameters at once; can't reannotate
 **** Packages: ~lattice~, ~grid~
+**** Formula: ~(y ~ x | f * g), data~
+plot _y_ over _x_ for every level of _f_ and _g_
+y over x as axis
+f and g are categorical (and optional)
+data is where the numbers are
+**** Easy to make a bunch of plots at once
+**** Lattice functions return ~trellis~
+system auto-prints it, but you can save it to an object
+**** Panel functions to add extra lines to plots:
+panel = func(x,y, ...){
+panel.xyplot(x,y, ...) # calls default
+panel.abline(h=median(x,y), col=3 ) # whatever line you wanna add
+panel.lmline(x,y, col=2) }
+**** Can't use base plotting parameters
+**** Default spacing/margins are usually fine
 *** The infamous ~ggplot2~
 Grammar of graphics by Wilkinson
 Improvement over lattice; customizable defaults
+**** Grammar theory: verb, noun, adj, etc.
+**** ~qplot()~
+***** Quick plot like base ~plot()~
+***** use data.frames
+***** _aesthetics_ - size, shape, color
+***** _geoms_ - points, lines
+***** label your factors!
+***** _facets_ for multiplots
+***** _scales_ how to split data (color)
+***** _stats_ smoothing, quantiles, etc.
+**** ~ggplot()~
+***** layer plots like base system
+data then aesthetics
+overlay a summary
+add metadata
+***** initial call will not make a plot
+***** ~ggplot() + geom_point()~ adds points
+~geom_smooth()~ adds line
+***** now it can print a plot
+***** ~face_grid(row ~ col)~ splits into plots by category
+use factors for this
+***** ~labs()~, ~ggtitle()~, ~theme()~ - annotation options
+***** aesthetics can be varied by variable with ~aes()~
+***** 
+**** Is pretty, but not too customizeable outside of presets
+**** ggplot will remove data points outside of plot limits
+**** try ~cut()~ to split data by categories/factors
 *** Graphics Devices
 ~?Devices~
 **** Screen, PDF, bitmap, SVG
@@ -284,3 +324,53 @@ Bitmaps are good for color
 **** But only plot to one device at a time
 **** ~dev.cur()~ and ~dev.set()~ for multiple devices
 **** ~dev.copy()~ copy plot to another device (MIGHT DISTORT)
+** Clustering analysis
+*** Hierarchical clustering
+**** agglomerative:
+**** _process_: closest things together, find next closest
+**** _needs_: be able to calculate distance, ability to merge
+**** _result_: tree that defines closeness
+**** _problems_: What does distance mean?
+euclidean - literal difference, continuous
+manhattan - node by node, no direct comparison 
+**** issues: unstable to changes, defining distance, defining scaling
+**** dendogram - plot of clusters
+**** merging: what is the distance of cluster?
+average of all distances?
+or largest distance?
+**** ~heatmap()~ - reorders table based on clustering 
+*** K-means clustering
+**** define distance
+**** what is a group? - predefined amount of clusters
+**** _centroid_ - center of cluster
+**** data is assigned to centroid
+**** recalculate centroids and clusters until they are close
+**** is not deterministic - results may vary
+*** Dimension Reduction
+**** reduce amount of variables - uncorrelated variables that explain the rest of the variables
+some variables depend on others - weight to height, we we can reduce it to one variable
+**** Singular Value Decomposition
+U - orthogonal left singular vectors
+D - orthogonal rigth singular vectors
+V^t - diagonal matrix with singular values
+**** Principal Components Analysis
+subtract column means and divide by stdev
+then run SVD to get stuff
+**** Explains % of variation based on specified component
+**** Doesn't work with NAs
+**** ~impute~ calculates NA based on nearest neighbors
+**** Lots of computation; scale-dependent
+* Colors!
+** ~grDevices~
+*** ~colorRamp~ takes 2 colors and can return a blend of 2 based on distance (0 to 1)
+*** ~colorRampPalette~ return a vector of colors between the 2 colors given
+** ~RColorBrewer~
+*** Sequential palette - ordered gradients
+*** Diverging palette - diverging gradients
+*** Qualitative palette - not ordered data
+** generate colors and pass them to ~col=~ parameter
+** ~smoothScatter~ to make overlapping prettier
+** ~rgb~ + ~alpha=~ to adjust color and opacity
+great to see density/clustering
+** ~colorspace~ is also cool
+** Colors communicate well :D
