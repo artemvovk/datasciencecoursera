@@ -374,3 +374,210 @@ then run SVD to get stuff
 great to see density/clustering
 ** ~colorspace~ is also cool
 ** Colors communicate well :D
+* Reproducible Research
+** Create notation for reasearch
+** Steps of data analysis
+** Define the question
+Make sure you have an interesting question
+If you just apply tools at random - 
+you will find something interesting
+but it might not be important
+** Define the ideal data set
+Too much data
+Descriptive, exploratory, inferential, predictive, casual, mechanistic
+different data for different goals
+** Determine what data set you can actually get
+You never get ideal data
+sampling can mess you up
+MAKE THE DATA
+*** Obtain data
+Always reference the source
+Get access time
+*** Clean data
+Was it pre-processed?
+Subset, reformat, etc.
+DOCUMENT YO SELF
+Sometimes you have to go back to find a better dataset
+*** Exploratory data analysis
+Figure out the structure of data
+Plots, summaries
+Clustering, etc.
+*** Statistical prediction/modeling
+Document your transformations!
+*** Interpret results
+Watch your language
+Explain the results, and why they are off
+*** Challenge results
+Cause someone else sure will
+Where can this be done better?
+*** Syntehsize results
+The story of your analysis
+Don't include everything, but keep it handy
+The story doesn't follow your timeline
+Make it pretty
+*** Create reproducible code
+So that someone else can do it
+** Organizing analysis
+*** Data
+Raw or not
+*** Figures
+Exploratory
+Final
+*** R code
+Raw scripts
+Modeling scripts
+*** Text
+Annotations
+Readmes, etc
+Report
+** RPubs
+*** Free account to publish your research
+*** Can use ~knitr~ and RStudio to publish
+** Project Checklist
+*** Start with Good Science
+**** Coherent question
+**** Tidy data
+*** Don't do things by hand
+**** It's too hard to document those things
+**** Don't clean/download/move data
+**** Don't do "just this one time"
+*** Don't use GUI tools
+**** Same as "doing by hand"
+**** Interactive software means higher complexity, means lower stability
+*** Make an algorithm
+**** Teach a computer to do your analysis
+**** Requires precise instructions
+*** User Version Control
+**** Slows you down - keep track of details
+**** Keeps a log of what you've done
+**** Allows to backtrack
+*** Keep track of software environment
+**** Computer specs
+**** Langages, libraries, pacakges, dependencies, versioning
+**** ~sessionInfo()~
+*** Don't save output
+**** Not until the very end
+**** Save the code instead
+*** Set your seeds
+**** Random number generators are not reproducible
+**** If you set seed, at least it's something
+*** Manage the pipeline
+**** Keep track of the process
+**** Have milestones
+** The Pipeline
+*** Question
+*** Protocol
+*** Measured Data -> Processing Code
+*** Analytic Data -> Analytic Code
+*** Computational Results -> Presentation Code
+*** Figres/Tables/Numerical Summaries
+*** Published Article
+** Reproducibility
+*** Not replication - most things cannot be replicated
+*** Does not guarantee validity
+*** Not everyone is on the same page - some might disagree
+*** Fixes problems only post-research, not before/during
+*** Still, have to try alternative approaches
+*** Who's going to bother to reproduce?
+** Deterministic Statistical Machine
+*** Standardized pipeline
+*** Transparent box
+*** Reduce "degrees of freedom"
+*** Like clinica trial protocol
+*** Different research will require different pipelines
+** ~Cacher~ package
+*** Storing intermediate results
+*** Saves code and data
+*** *OK NEVERMIND IT IS DISCONTINUED*
+* Statistical Inference
+** Frequentist paradigm
+*** vs Bayesian
+*** % of time something happens
+** Probability models
+*** Sum of randomness - potential outcomes
+*** Probability is 0 to 1
+*** Exclusive sets of outcomes add up to 1
+*** P(Nothing) = 0
+*** P(Something) = 1
+*** P(X) = 1 - P(-X)
+*** If A implies B then P(A) is less than P(B)
+A is a subset of B
+*** P(A&B) is sum of P(A) plus P(B) minus intersection
+If you add A and B then you get the overlap twice
+** Random Variable and its Functions
+*** Discrete = countable, quantifiable outcomes (hair color, number of hits, etc)
+*** Continuous = on a continuum (assigned by ranges, BMI of subject, IQ for a population)
+*** *Probability Mass Function* = assigns a Pr to a variable outcome
+1/6 for a die roll of 1
+*** PMF is always > 0
+*** Sum of all PMF is 1
+*** *Probability Densify Function* = for continuous variables
+*** PDF > 0 everywhere
+*** Total area under PDF = 1
+*** *Cumulative Distribution Function* = probability of result less than X
+*** *Survival function* = reverse of CDF
+*** Quantiles = PDF of Xth percentile
+Probability of random X being below the Quantile is equal to the Quantile
+** Conditional Probability
+*** Condition selects a sample from all probabilities
+*** P(A|B) = P(A&B) / P(B)
+Pr of B given that A has occured = Pr of intersection divided by Pr of B
+** Bayes' Rule
+*** P(B|A) = (P(A|B)P(B))/(P(A|B)P(B) + P(A|-B)P(-B))
+*** Diagnostic test - get Sensitivity/Specificity and Predictive values
+*** Test positive knowing that Disease is present
+*** Likelihood ratio -> Sensitivity divided by False positive
+** Independence
+*** Only independent probabilities can be multiplied
+*** Independent and Identically Distributed variables = default model for random samples
+** Expected Values
+*** Mean is the center of the distribution - like center of mass
+*** Population mean = Sum of values of X times Pr of X
+For a die:
+(1+2+3+4+5+6)*(1/6) = 3.5
+*** Variance is the spread of the distribution
+*** Sample mean is center of mass if Pr of all X was equal
+*** For continuous variable, mean is the 1/2 area
+*** Mean of sample means is estimation of population mean - estimator
+*** In other words: distribution of averages will center on the center of the population
+Population mean of coin flips is 0.5
+Average of 10 coin flips is around 0.5 - sample mean
+Average of 10 averages of 10 coin flips is closer to 0.5 - mean of sample mean
+** Variance
+*** Var(X) = E[(X-u)^2] = E[X^2] - E[X]^2
+*** sqrt(Var) = standard deviation
+*** Variance - how spread the function is from the mean
+*** Sample variance - avg(observed variance) (divide by n-1)
+*** Sample variances have a distribution - it centers around population variance
+*** Dividing by (n-1) is what makes it unbiased???
+*** Var(sameple mean) = (mu^2)/n -> closer to 0 with more sample data
+*** Standard error - stdev/(sqrt(n)) - how much sample means deviate from population mean
+** Distributions
+*** Bernoulli - binary outcome
+**** P(x) = p^x(1-p)^(1-x)
+**** mean = p
+**** Var = p(1-p)
+*** Binomial - sum of Bernoulli variables
+**** Same as Bernoulli but with (n choose x) upfront
+*** Normal/Gaussian - bell curve 
+**** mean = mu
+**** Var = sig^2
+**** standard normal - mu = 0, sig = 1
+**** Standard deviation is good to use to estimate probabilities
+*** Poisson - lambda^x(e^-lambda)/fact(x)
+**** Probability of x events happening when the average per interval is lambda
+**** mean = lambda
+**** Var = lambda
+**** Used to model count data, small p binomials, contingency tables, rates, etc.
+**** When n is big and p is small it's close to Binomial
+** Asymptotics
+*** Behavior of statistic as sample size goes to Inf
+*** *Law of Large Numbers* - average converges to what it is estimating
+*** Estimator is _consistent_ if it converges to estimate
+*** Sample mean, variance and deviation are _consistent_ 
+*** *Central Limit Theorem* - distribution of means of iid variables converges to standard normal distribution
+*** (Estimate - Mean of Estimate)/(StdErr of Estimate) -> standard normal distribution for large n
+*** *Confidence interval* - interval estimate of a population parameter;
+90% confidence interval = probability that the real value lies within the interval of the sample
+*** *Confidence level* - with more confidence intervals -> proportion of intervals that will contain the true value of the parameter
+*** Mean +/- normal quantile time StdErr yields confidence interval for the mean
