@@ -581,3 +581,74 @@ Average of 10 averages of 10 coin flips is closer to 0.5 - mean of sample mean
 90% confidence interval = probability that the real value lies within the interval of the sample
 *** *Confidence level* - with more confidence intervals -> proportion of intervals that will contain the true value of the parameter
 *** Mean +/- normal quantile time StdErr yields confidence interval for the mean
+* Confidence Intervals
+** T Confidence Intervals
+*** Est +/- TQ*SEest
+*** Smaller samples
+*** T interval for quantile
+*** Degrees of Freedom - smaller samples generate narrow confidence intervals
+*** Xbar +/- T(n-1)S/sqrt(n)
+*** T(n-1) = quantile
+*** Heavier tails than normal dist
+*** T interval assumes data is kinda normal dist
+*** Don't use it for skewed dist
+*** For independent groups we take diff of averages
+Ybar-Xbar +/- t(nt+ny-2)*Sderr(1/nx+1/ny)^.5
+*** If sample sizes are different, need to weight variance differently
+*** Unequal variance interval - crazy formula for degrees of freedom
+** Hypothesis testing
+*** Null hypothesis = status quo = H0
+*** In order to make inference - null needs to be disproved
+*** Ha = hypothesis to test
+*** Type I error = decide Ha when H0 is true
+*** Type II error = decide H0 when Ha is true
+*** Pr of Type I rate ~ 5%
+*** StdErr of Mean = Stdev/sqrt(sample size)
+*** Find a 95% confidence interval for distribution of the mean = Type I err = 5%
+*** Two sided test require wider intervals 5% -> 2.5% on each side
+*** Two-group test = compare means of two groups
+** P-values
+*** Compare Type I error rate to P value
+*** If P value < then reject N0
+*** P-value = probability of getting data > extreme than observed data
+*** How likely that our samples will have statistic this large if N0 is true?
+*** If not likely - then N0 is rejected
+*** Assuming N0 - how unusual is our observation?
+*** P-value - opposide of confidence interval - alpha level for the hypothesis test
+*** If P < alpha level = reject N0
+*** 
+* Power
+** Probability of rejecting H0 when it's false - good thing
+** Type II Error - failing to reject H0 when it's false - error rate = beta
+** Power = 1 -  beta
+** Power depends on the mean under H0 - for detecting deviations
+** Power curve - more likely to detect bigger difference
+** With more data - higher chance of detecting deviations
+** Power is Pr of Mean being bigger than Mean under H0 + standard error quantiles
+** Unknowns: MeanA, sigma, n and beta
+** Knowns: Mean0, alpha
+** Effect size: difference of means divided by sigma - for bigger power
+(sqrt(n)(mu-mu0))/sigma
+** ~power.t.test~ does everything for you...
+* Multiple testing
+** Multiple testing is correcting for false positives
+** 5% error chance is still a possibility - after 20 tests something will show up
+** False error rate - beta = 0
+** Family wise error rate - Pr of at least one false positive
+** False discovery rate - false significance
+** P-values control error rate at alpha - can we do better?
+** Bonferroni correction - for family wise error rate - set alpha to be alpha/(number of tests)
+** Very conservative
+** False discovery rate - calculate p-values and accept ith p-value smaller than alpha*(i/m)
+* Resampling
+** Bootstrap - sample from empirical data, not from total population
+** Sample with replacement values - resample a lot of times and make an estimate from that
+resample n observations each time
+** With replacement -> Each observation has Pr 1/n -> some observations will be repeated
+** Use the resampled data to estimate statistics for total population
+** Monte Carlo error?
+** Efron and Tibshirani on bootstrap
+* Permutation tests
+** If H0 is that a statistic is the same for 2 groups
+** Mix the data and permute it and recalculate the statistic
+** Calculate where permuted data generated an extreme statistic = p-value
